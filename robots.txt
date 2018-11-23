@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: http://hollybee.wang/sitemap.xml
+Sitemap: https://hollybee.wang/sitemap.xml
