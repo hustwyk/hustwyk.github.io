@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Android逆向大黄书网页收集版（根据大黄书自制） - @Xcare.blog()</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Xcare" /><meta name="description" content="a collection of web pages included in the android big yellow book" /><meta name="keywords" content="android, security, protection, reverse" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.50 with even 4.0.0" />
+
+
+<link rel="canonical" href="http://hollybee.wang/post/androidappsecproandreverseanalysing/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Android逆向大黄书网页收集版（根据大黄书自制）" />
+<meta property="og:description" content="a collection of web pages included in the android big yellow book" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hollybee.wang/post/androidappsecproandreverseanalysing/" /><meta property="article:published_time" content="2019-03-04T15:43:44&#43;08:00"/>
+<meta property="article:modified_time" content="2019-03-04T15:43:44&#43;08:00"/>
+
+<meta itemprop="name" content="Android逆向大黄书网页收集版（根据大黄书自制）">
+<meta itemprop="description" content="a collection of web pages included in the android big yellow book">
+
+
+<meta itemprop="datePublished" content="2019-03-04T15:43:44&#43;08:00" />
+<meta itemprop="dateModified" content="2019-03-04T15:43:44&#43;08:00" />
+<meta itemprop="wordCount" content="1077">
+
+
+
+<meta itemprop="keywords" content="android,reverse,security," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Android逆向大黄书网页收集版（根据大黄书自制）"/>
+<meta name="twitter:description" content="a collection of web pages included in the android big yellow book"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">@Xcare.blog()</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">@Xcare.blog()</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Android逆向大黄书网页收集版（根据大黄书自制）</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-03-04 </span>
+        <div class="post-category">
+            <a href="/categories/android/"> android </a>
+            <a href="/categories/reverse/"> reverse </a>
+            <a href="/categories/security/"> security </a>
+            </div>
+          <span class="more-meta"> 1077 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#第14章-android中的so加固原理">第14章 Android中的so加固原理</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p></p>
+
+<h2 id="第14章-android中的so加固原理">第14章 Android中的so加固原理</h2>
+
+<ul>
+<li><p>Android逆向之旅&mdash;基于对so中的section加密技术实现so加固</p>
+
+<p><a href="https://blog.csdn.net/jiangwei0910410003/article/details/49962173">https://blog.csdn.net/jiangwei0910410003/article/details/49962173</a></p></li>
+
+<li><p>Android逆向之旅&mdash;Android应用的汉化功能(修改SO中的字符串内容)</p>
+
+<p><a href="https://blog.csdn.net/jiangwei0910410003/article/details/49361281">https://blog.csdn.net/jiangwei0910410003/article/details/49361281</a></p></li>
+
+<li><p>简单粗暴的so加解密实现</p>
+
+<p><a href="https://bbs.pediy.com/thread-191649.htm">https://bbs.pediy.com/thread-191649.htm</a></p></li>
+
+<li><p>至于ELF文件格式，下面给出64位ELF文件格式解析以及对比给出32位ELF文件格式解析</p>
+
+<p>i) readelf -h 查看64位so文件的header</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ELF Header:
+Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
+Class:                             ELF64
+Data:                              2&#39;s complement, little endian
+Version:                           1 (current)
+OS/ABI:                            UNIX - System V
+ABI Version:                       0
+Type:                              DYN (Shared object file)
+Machine:                           AArch64
+Version:                           0x1
+Entry point address:               0xe5c0
+Start of program headers:          64 (bytes into file)
+Start of section headers:          221776 (bytes into file)
+Flags:                             0x0
+Size of this header:               64 (bytes)
+Size of program headers:           56 (bytes)
+Number of program headers:         8
+Size of section headers:           64 (bytes)
+Number of section headers:         24
+Section header string table index: 23</pre></td></tr></table>
+</div>
+</div>
+<p>对比查看32位so文件的header</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">ELF Header:
+Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00
+Class:                             ELF32
+Data:                              2&#39;s complement, little endian
+Version:                           1 (current)
+OS/ABI:                            UNIX - System V
+ABI Version:                       0
+Type:                              DYN (Shared object file)
+Machine:                           ARM
+Version:                           0x1
+Entry point address:               0x0
+Start of program headers:          52 (bytes into file)
+Start of section headers:          103056 (bytes into file)
+Flags:                             0x5000200, Version5 EABI, soft-float ABI
+Size of this header:               52 (bytes)
+Size of program headers:           32 (bytes)
+Number of program headers:         8
+Size of section headers:           40 (bytes)
+Number of section headers:         26
+Section header string table index: 25</pre></td></tr></table>
+</div>
+</div>
+<p>可以看出一个很大的变化在于 <code>Size of this header</code>、<code>Size of program headers</code>、<code>Size of section headers</code></p>
+
+<p>ii) 下面给出64位ELF文件的section header的结构</p>
+
+<p>（来自<a href="http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf64.h）">http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf64.h）</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">typedef struct elf64_shdr {
+    Elf64_Word sh_name;
+    Elf64_Word sh_type;
+    Elf64_Xword sh_flags;
+    Elf64_Addr sh_addr;
+    Elf64_Off sh_offset;
+    Elf64_Xword sh_size;
+    Elf64_Word sh_link;
+    Elf64_Word sh_info;
+    Elf64_Xword sh_addralign;
+    Elf64_Xword sh_entsize;
+} Elf64_Shdr;</pre></td></tr></table>
+</div>
+</div>
+<p>其中字段类型的typedefs如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">typedef uint16_t Elf64_Half;
+typedef int16_t Elf64_SHalf;
+typedef uint32_t Elf64_Word;
+typedef int32_t Elf64_Sword;
+typedef uint64_t Elf64_Xword;
+typedef int64_t Elf64_Sxword;
+typedef uint64_t Elf64_Off;
+typedef uint64_t Elf64_Addr;
+typedef uint16_t Elf64_Section;</pre></td></tr></table>
+</div>
+</div>
+<p>对比给出32位ELF文件的section header的结构</p>
+
+<p>（来自<a href="http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf32.h）">http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf32.h）</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">    typedef struct elf32_shdr {
+    Elf32_Word sh_name;
+    Elf32_Word sh_type;
+    Elf32_Word sh_flags;
+    Elf32_Addr sh_addr;
+    Elf32_Off sh_offset;
+    Elf32_Word sh_size;
+    Elf32_Word sh_link;
+    Elf32_Word sh_info;
+    Elf32_Word sh_addralign;
+    Elf32_Word sh_entsize;
+} Elf32_Shdr;</pre></td></tr></table>
+</div>
+</div>
+<p>其中字段类型的typedefs如下</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">typedef uint16_t Elf32_Half;
+typedef int16_t Elf32_SHalf;
+typedef uint32_t Elf32_Word;
+typedef int32_t Elf32_Sword;
+typedef uint64_t Elf32_Xword;
+typedef int64_t Elf32_Sxword;
+typedef uint32_t Elf32_Off;
+typedef uint32_t Elf32_Addr;
+typedef uint16_t Elf32_Section;</pre></td></tr></table>
+</div>
+</div>
+<p>由此可以简单计算出64位ELF文件section header共有</p>
+
+<p><code>len(Elf64_Word)</code> + <code>len(Elf64_Word)</code> + <code>len(Elf64_Xword)</code> + <code>len(Elf64_Addr)</code> + <code>len(Elf64_Off)</code> + <code>len(Elf64_Xword)</code> + <code>len(Elf64_Word)</code> + <code>len(Elf64_Word)</code> + <code>len(Elf64_Xword)</code> + <code>len(Elf64_Xword)</code> = 4B + 4B + 8B + 8B + 8B + 8B + 4B + 4B + 8B + 8B = 64B</p>
+
+<p>32位ELF文件section header共有</p>
+
+<p><code>len(Elf32_Word)</code> + <code>len(Elf32_Word)</code> + <code>len(Elf32_Word)</code> + <code>len(Elf32_Addr)</code> + <code>len(Elf32_Off)</code> + <code>len(Elf32_Word)</code> + <code>len(Elf32_Word)</code> + <code>len(Elf32_Word)</code> + <code>len(Elf32_Word)</code> + <code>len(Elf32_Word)</code> = 4B + 4B + 4B + 4B + 4B + 4B + 4B + 4B + 4B + 4B = 40B</p>
+
+<p>如有需要，可以查看<a href="../android_elf">elf.h</a>（包含了elf32.h以及elf64.h）</p></li>
+</ul>
+    </div>
+
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/wechat.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/alipay.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/android/">android</a>
+          <a href="/tags/reverse/">reverse</a>
+          <a href="/tags/security/">security</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/android_elf/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Android_elf</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/jetson_tx2_flash_jetpack3.2/">
+            <span class="next-text nav-default">Parallel Ubuntu16虚拟机 Jetson TX2 刷jetpack3.2</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'hollybee-wang';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-03-04 15:43:44 \x2b0800 CST',
+        title: 'Android逆向大黄书网页收集版（根据大黄书自制）',
+        clientID: '6ec2d4e18a02ee89da4e',
+        clientSecret: 'f2443f8af6b97e6700dd65a6605fbdc444903943',
+        repo: 'BlogComments',
+        owner: 'hustwyk',
+        admin: ['hustwyk'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:hustwyk@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/YorkLynn2" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/InconWong" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://github.com/hustwyk" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/anna-daisy-5/activities" class="iconfont icon-zhihu" title="zhihu"></a>
+  <a href="http://hollybee.wang/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Xcare</span>
+  </span>
+  <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#ccc;text-decoration:none;font-size:14px;">京ICP备18057338号</a>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-129663555-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
