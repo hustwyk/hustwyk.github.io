@@ -273,7 +273,7 @@ Section header string table index: 25</pre></td></tr></table>
 <p>（来自 <a href="http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf64.h">http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf64.h</a> ）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -285,26 +285,26 @@ Section header string table index: 25</pre></td></tr></table>
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">typedef struct elf64_shdr {
-    Elf64_Word sh_name;
-    Elf64_Word sh_type;
-    Elf64_Xword sh_flags;
-    Elf64_Addr sh_addr;
-    Elf64_Off sh_offset;
-    Elf64_Xword sh_size;
-    Elf64_Word sh_link;
-    Elf64_Word sh_info;
-    Elf64_Xword sh_addralign;
-    Elf64_Xword sh_entsize;
-} Elf64_Shdr;</pre></td></tr></table>
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">elf64_shdr</span> <span class="p">{</span>
+    <span class="n">Elf64_Word</span> <span class="n">sh_name</span><span class="p">;</span>
+    <span class="n">Elf64_Word</span> <span class="n">sh_type</span><span class="p">;</span>
+    <span class="n">Elf64_Xword</span> <span class="n">sh_flags</span><span class="p">;</span>
+    <span class="n">Elf64_Addr</span> <span class="n">sh_addr</span><span class="p">;</span>
+    <span class="n">Elf64_Off</span> <span class="n">sh_offset</span><span class="p">;</span>
+    <span class="n">Elf64_Xword</span> <span class="n">sh_size</span><span class="p">;</span>
+    <span class="n">Elf64_Word</span> <span class="n">sh_link</span><span class="p">;</span>
+    <span class="n">Elf64_Word</span> <span class="n">sh_info</span><span class="p">;</span>
+    <span class="n">Elf64_Xword</span> <span class="n">sh_addralign</span><span class="p">;</span>
+    <span class="n">Elf64_Xword</span> <span class="n">sh_entsize</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">Elf64_Shdr</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>其中字段类型的typedefs如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -313,17 +313,17 @@ Section header string table index: 25</pre></td></tr></table>
 </span><span class="lnt">7
 </span><span class="lnt">8
 </span><span class="lnt">9
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">typedef uint16_t Elf64_Half;
-typedef int16_t Elf64_SHalf;
-typedef uint32_t Elf64_Word;
-typedef int32_t Elf64_Sword;
-typedef uint64_t Elf64_Xword;
-typedef int64_t Elf64_Sxword;
-typedef uint64_t Elf64_Off;
-typedef uint64_t Elf64_Addr;
-typedef uint16_t Elf64_Section;</pre></td></tr></table>
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="n">uint16_t</span> <span class="n">Elf64_Half</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">int16_t</span> <span class="n">Elf64_SHalf</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint32_t</span> <span class="n">Elf64_Word</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">int32_t</span> <span class="n">Elf64_Sword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint64_t</span> <span class="n">Elf64_Xword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">int64_t</span> <span class="n">Elf64_Sxword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint64_t</span> <span class="n">Elf64_Off</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint64_t</span> <span class="n">Elf64_Addr</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint16_t</span> <span class="n">Elf64_Section</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>对比给出32位ELF文件的section header的结构</p>
@@ -331,7 +331,7 @@ typedef uint16_t Elf64_Section;</pre></td></tr></table>
 <p>（来自 <a href="http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf32.h">http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf32.h</a> ）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -343,26 +343,26 @@ typedef uint16_t Elf64_Section;</pre></td></tr></table>
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">typedef struct elf32_shdr {
-    Elf32_Word sh_name;
-    Elf32_Word sh_type;
-    Elf32_Word sh_flags;
-    Elf32_Addr sh_addr;
-    Elf32_Off sh_offset;
-    Elf32_Word sh_size;
-    Elf32_Word sh_link;
-    Elf32_Word sh_info;
-    Elf32_Word sh_addralign;
-    Elf32_Word sh_entsize;
-} Elf32_Shdr;</pre></td></tr></table>
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">elf32_shdr</span> <span class="p">{</span>
+    <span class="n">Elf32_Word</span> <span class="n">sh_name</span><span class="p">;</span>
+    <span class="n">Elf32_Word</span> <span class="n">sh_type</span><span class="p">;</span>
+    <span class="n">Elf32_Word</span> <span class="n">sh_flags</span><span class="p">;</span>
+    <span class="n">Elf32_Addr</span> <span class="n">sh_addr</span><span class="p">;</span>
+    <span class="n">Elf32_Off</span> <span class="n">sh_offset</span><span class="p">;</span>
+    <span class="n">Elf32_Word</span> <span class="n">sh_size</span><span class="p">;</span>
+    <span class="n">Elf32_Word</span> <span class="n">sh_link</span><span class="p">;</span>
+    <span class="n">Elf32_Word</span> <span class="n">sh_info</span><span class="p">;</span>
+    <span class="n">Elf32_Word</span> <span class="n">sh_addralign</span><span class="p">;</span>
+    <span class="n">Elf32_Word</span> <span class="n">sh_entsize</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">Elf32_Shdr</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>其中字段类型的typedefs如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -371,17 +371,17 @@ typedef uint16_t Elf64_Section;</pre></td></tr></table>
 </span><span class="lnt">7
 </span><span class="lnt">8
 </span><span class="lnt">9
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">typedef uint16_t Elf32_Half;
-typedef int16_t Elf32_SHalf;
-typedef uint32_t Elf32_Word;
-typedef int32_t Elf32_Sword;
-typedef uint64_t Elf32_Xword;
-typedef int64_t Elf32_Sxword;
-typedef uint32_t Elf32_Off;
-typedef uint32_t Elf32_Addr;
-typedef uint16_t Elf32_Section;</pre></td></tr></table>
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="n">uint16_t</span> <span class="n">Elf32_Half</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">int16_t</span> <span class="n">Elf32_SHalf</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint32_t</span> <span class="n">Elf32_Word</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">int32_t</span> <span class="n">Elf32_Sword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint64_t</span> <span class="n">Elf32_Xword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">int64_t</span> <span class="n">Elf32_Sxword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint32_t</span> <span class="n">Elf32_Off</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint32_t</span> <span class="n">Elf32_Addr</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="n">uint16_t</span> <span class="n">Elf32_Section</span><span class="p">;</span></code></pre></td></tr></table>
 </div>
 </div>
 <p>由此可以简单计算出64位ELF文件section header共有</p>
