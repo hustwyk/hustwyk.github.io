@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>http://hollybee.wang/post/tracetothetaobaoantifaker/</loc>
+    <lastmod>2019-03-10T14:04:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://hollybee.wang/post/android_elf/</loc>
     <lastmod>2019-03-06T14:55:55+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -52,7 +59,7 @@
   
   <url>
     <loc>http://hollybee.wang/post/</loc>
-    <lastmod>2019-03-06T14:55:55+08:00</lastmod>
+    <lastmod>2019-03-10T14:04:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -150,6 +157,34 @@
   <url>
     <loc>http://hollybee.wang/categories/security/</loc>
     <lastmod>2019-03-04T15:43:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/tags/social-engineering/</loc>
+    <lastmod>2019-03-10T14:04:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/categories/social-engineering/</loc>
+    <lastmod>2019-03-10T14:04:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/tags/trace/</loc>
+    <lastmod>2019-03-10T14:04:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/categories/trace/</loc>
+    <lastmod>2019-03-10T14:04:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
