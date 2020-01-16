@@ -23,14 +23,14 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/extension/</loc>
+    <loc>http://hollybee.wang/categories/extension/</loc>
     <lastmod>2020-01-16T09:45:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://hollybee.wang/categories/extension/</loc>
+    <loc>http://hollybee.wang/tags/extension/</loc>
     <lastmod>2020-01-16T09:45:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -93,14 +93,14 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/categories/android/</loc>
+    <loc>http://hollybee.wang/tags/android/</loc>
     <lastmod>2019-04-19T15:43:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/android/</loc>
+    <loc>http://hollybee.wang/categories/android/</loc>
     <lastmod>2019-04-19T15:43:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -177,13 +177,6 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/security/</loc>
-    <lastmod>2019-04-19T15:43:44+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://hollybee.wang/categories/security/</loc>
     <lastmod>2019-04-19T15:43:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -191,8 +184,8 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/embedded/</loc>
-    <lastmod>2018-04-15T20:48:38+08:00</lastmod>
+    <loc>http://hollybee.wang/tags/security/</loc>
+    <lastmod>2019-04-19T15:43:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -205,7 +198,7 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/categories/jetson/</loc>
+    <loc>http://hollybee.wang/tags/embedded/</loc>
     <lastmod>2018-04-15T20:48:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -219,7 +212,7 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/nvidia/</loc>
+    <loc>http://hollybee.wang/categories/jetson/</loc>
     <lastmod>2018-04-15T20:48:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -227,6 +220,13 @@
   
   <url>
     <loc>http://hollybee.wang/categories/nvidia/</loc>
+    <lastmod>2018-04-15T20:48:38+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/tags/nvidia/</loc>
     <lastmod>2018-04-15T20:48:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
