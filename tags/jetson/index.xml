@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>jetson on @Xcare.blog()</title>
@@ -18,15 +18,10 @@
       <pubDate>Sun, 15 Apr 2018 20:48:38 +0800</pubDate>
       
       <guid>http://hollybee.wang/post/jetson_tx2_flash_jetpack3.2/</guid>
-      <description>&lt;p&gt;JETPACK地址：&lt;a href=&#34;https://developer.nvidia.com/embedded/jetpack&#34;&gt;https://developer.nvidia.com/embedded/jetpack&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;在host机上创建文件夹 &lt;strong&gt;&lt;em&gt;installJetPack&lt;/em&gt;&lt;/strong&gt; 文件夹，把下载好的 &lt;strong&gt;&lt;em&gt;JetPack-L4T-3.x-linux-x64.run&lt;/em&gt;&lt;/strong&gt; 拷贝进去&lt;/p&gt;
-
+      <description>&lt;p&gt;JETPACK地址：https://developer.nvidia.com/embedded/jetpack&lt;/p&gt;
+&lt;p&gt;在host机上创建文件夹 &lt;em&gt;&lt;strong&gt;installJetPack&lt;/strong&gt;&lt;/em&gt; 文件夹，把下载好的 &lt;em&gt;&lt;strong&gt;JetPack-L4T-3.x-linux-x64.run&lt;/strong&gt;&lt;/em&gt; 拷贝进去&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;chmod +x JetPack-L4T-3.x-linux-x64.run&lt;/code&gt; 修改为可执行权限&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;./JetPack-L4T-3.x-linux-x64.run&lt;/code&gt;运行并下载所需要的包&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;./JetPack-L4T-3.x-linux-x64.run&lt;/code&gt;运行并下载所需要的包&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,8 +31,7 @@
       
       <guid>http://hollybee.wang/post/jetson_tx2_nvpmodel/</guid>
       <description>&lt;p&gt;Nvidia jetson tx2 CPU模式转变&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;$ sudo nvpmodel -q&lt;/code&gt;可以查询当前cpu模式&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;$ sudo nvpmodel -q &lt;/code&gt;可以查询当前cpu模式&lt;/p&gt;</description>
     </item>
     
   </channel>

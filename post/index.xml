@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on @Xcare.blog()</title>
@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Xcare</copyright>
-    <lastBuildDate>Sat, 16 Mar 2019 11:49:06 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2020 09:45:32 +0800</lastBuildDate>
     
 	<atom:link href="http://hollybee.wang/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol</title>
+      <link>http://hollybee.wang/post/syncsoftwarefinder/</link>
+      <pubDate>Thu, 16 Jan 2020 09:45:32 +0800</pubDate>
+      
+      <guid>http://hollybee.wang/post/syncsoftwarefinder/</guid>
+      <description>&lt;p&gt;记一次解决macOS Catalina中Finder插件冲突的问题。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Install Kali 2019 on Parallel</title>
@@ -18,8 +27,7 @@
       <pubDate>Sat, 16 Mar 2019 11:49:06 +0800</pubDate>
       
       <guid>http://hollybee.wang/post/installkali2019onparallel/</guid>
-      <description>&lt;p&gt;记一次在&lt;a href=&#34;https://xclient.info/s/parallels-desktop.html?t=5d715616c57d46b4ed06f92f4ca4b8cc02093f82#versions&#34;&gt;Parallel Desktop&lt;/a&gt;中安装&lt;a href=&#34;https://www.kali.org/downloads/&#34;&gt;Kali Linux&lt;/a&gt;的过程。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;记一次在&lt;a href=&#34;https://xclient.info/s/parallels-desktop.html?t=5d715616c57d46b4ed06f92f4ca4b8cc02093f82#versions&#34;&gt;Parallel Desktop&lt;/a&gt;中安装&lt;a href=&#34;https://www.kali.org/downloads/&#34;&gt;Kali Linux&lt;/a&gt;的过程。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,8 +36,7 @@
       <pubDate>Fri, 15 Mar 2019 09:38:37 +0800</pubDate>
       
       <guid>http://hollybee.wang/post/androidencodesection/</guid>
-      <description>&lt;p&gt;在赵四的文章&lt;a href=&#34;https://blog.csdn.net/jiangwei0910410003/article/details/49962173&#34;&gt;《Android逆向之旅&amp;mdash;基于对so中的section加密技术实现so加固》&lt;/a&gt;中，已经很详尽的介绍了对so库的section加密并在内存中解密的过程，但是四哥的方法改动了&lt;code&gt;shoff&lt;/code&gt;(section header offset)，这个在android7.0之后是不能work的，因为7.0之后android对so库elf头中关于section部分的进行了校验，修改&lt;code&gt;shoff&lt;/code&gt;会导致so库加载后不能运行，本文的是借助了四哥的另一篇文章的方法来解决的这个问题。
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;在赵四的文章&lt;a href=&#34;https://blog.csdn.net/jiangwei0910410003/article/details/49962173&#34;&gt;《Android逆向之旅&amp;mdash;基于对so中的section加密技术实现so加固》&lt;/a&gt;中，已经很详尽的介绍了对so库的section加密并在内存中解密的过程，但是四哥的方法改动了&lt;code&gt;shoff&lt;/code&gt;(section header offset)，这个在android7.0之后是不能work的，因为7.0之后android对so库elf头中关于section部分的进行了校验，修改&lt;code&gt;shoff&lt;/code&gt;会导致so库加载后不能运行，本文的是借助了四哥的另一篇文章的方法来解决的这个问题。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,8 +45,7 @@
       <pubDate>Sun, 10 Mar 2019 14:04:13 +0800</pubDate>
       
       <guid>http://hollybee.wang/post/tracetothetaobaoantifaker/</guid>
-      <description>&lt;p&gt;“ 现在诞生了一个职业，他们混迹淘宝高仿店，利用淘宝打假去申请退款，还有人利用淘宝漏洞去恶意退款良心商家，一些商家害怕不良记录只能忍气吞声，淘宝打假人混的好的一个月收入能有两万以上。”
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;“ 现在诞生了一个职业，他们混迹淘宝高仿店，利用淘宝打假去申请退款，还有人利用淘宝漏洞去恶意退款良心商家，一些商家害怕不良记录只能忍气吞声，淘宝打假人混的好的一个月收入能有两万以上。”&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,7 +54,7 @@
       <pubDate>Wed, 06 Mar 2019 14:55:55 +0800</pubDate>
       
       <guid>http://hollybee.wang/post/android_elf/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -57,7 +63,7 @@
       <pubDate>Mon, 04 Mar 2019 15:43:44 +0800</pubDate>
       
       <guid>http://hollybee.wang/post/androidappsecproandreverseanalysing/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -66,15 +72,10 @@
       <pubDate>Sun, 15 Apr 2018 20:48:38 +0800</pubDate>
       
       <guid>http://hollybee.wang/post/jetson_tx2_flash_jetpack3.2/</guid>
-      <description>&lt;p&gt;JETPACK地址：&lt;a href=&#34;https://developer.nvidia.com/embedded/jetpack&#34;&gt;https://developer.nvidia.com/embedded/jetpack&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;在host机上创建文件夹 &lt;strong&gt;&lt;em&gt;installJetPack&lt;/em&gt;&lt;/strong&gt; 文件夹，把下载好的 &lt;strong&gt;&lt;em&gt;JetPack-L4T-3.x-linux-x64.run&lt;/em&gt;&lt;/strong&gt; 拷贝进去&lt;/p&gt;
-
+      <description>&lt;p&gt;JETPACK地址：https://developer.nvidia.com/embedded/jetpack&lt;/p&gt;
+&lt;p&gt;在host机上创建文件夹 &lt;em&gt;&lt;strong&gt;installJetPack&lt;/strong&gt;&lt;/em&gt; 文件夹，把下载好的 &lt;em&gt;&lt;strong&gt;JetPack-L4T-3.x-linux-x64.run&lt;/strong&gt;&lt;/em&gt; 拷贝进去&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;chmod +x JetPack-L4T-3.x-linux-x64.run&lt;/code&gt; 修改为可执行权限&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;./JetPack-L4T-3.x-linux-x64.run&lt;/code&gt;运行并下载所需要的包&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;./JetPack-L4T-3.x-linux-x64.run&lt;/code&gt;运行并下载所需要的包&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -84,8 +85,7 @@
       
       <guid>http://hollybee.wang/post/jetson_tx2_nvpmodel/</guid>
       <description>&lt;p&gt;Nvidia jetson tx2 CPU模式转变&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;$ sudo nvpmodel -q&lt;/code&gt;可以查询当前cpu模式&lt;/p&gt;</description>
+&lt;p&gt;&lt;code&gt;$ sudo nvpmodel -q &lt;/code&gt;可以查询当前cpu模式&lt;/p&gt;</description>
     </item>
     
   </channel>

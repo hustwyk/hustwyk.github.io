@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extension on @Xcare.blog()</title>
+    <link>http://hollybee.wang/tags/extension/</link>
+    <description>Recent content in Extension on @Xcare.blog()</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Xcare</copyright>
+    <lastBuildDate>Thu, 16 Jan 2020 09:45:32 +0800</lastBuildDate>
+    
+	<atom:link href="http://hollybee.wang/tags/extension/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol</title>
+      <link>http://hollybee.wang/post/syncsoftwarefinder/</link>
+      <pubDate>Thu, 16 Jan 2020 09:45:32 +0800</pubDate>
+      
+      <guid>http://hollybee.wang/post/syncsoftwarefinder/</guid>
+      <description>&lt;p&gt;记一次解决macOS Catalina中Finder插件冲突的问题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
