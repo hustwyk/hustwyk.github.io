@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.0 with theme even" />
 
 
 <link rel="canonical" href="http://hollybee.wang/post/syncsoftwarefinder/" />
@@ -140,22 +140,22 @@
   <div class="post-toc-content">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#00-">00 问题出现</a></li>
-    <li><a href="#01-">01 尝试各种重启重装</a></li>
-    <li><a href="#02-">02 上网搜，问客服啊</a></li>
-    <li><a href="#03-">03 总结</a></li>
+    <li><a href="#00-问题出现">00 问题出现</a></li>
+    <li><a href="#01-尝试各种重启重装">01 尝试各种重启重装</a></li>
+    <li><a href="#02-上网搜问客服啊">02 上网搜，问客服啊</a></li>
+    <li><a href="#03-总结">03 总结</a></li>
   </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
       <p>记一次解决macOS Catalina中Finder插件冲突的问题。</p>
-<h2 id="00-"><strong>00 问题出现</strong></h2>
+<h2 id="00-问题出现"><strong>00 问题出现</strong></h2>
 <p>之前在用Mojave的时候，给Finder装了几个插件：<code>iCloud Drive[系统自带]</code>, <code>OneDrive Finder Integration</code>, <code>Easy New File Extension</code>, <code>Dropbox Finder Extension</code>, <code>NutstoreFinderExtension</code>.</p>
 <p><img src="/images/SyncSoftwareFinder/FinderExtensions.png" alt="Local Picture" title="FinderExtensions"></p>
 <p>当时他们都还相安无事。</p>
 <p>之后系统升级到了Catalina，然后打开Finder之后，发现OneDrive、NutStore同步文件右下角的<code>绿色小勾</code>都不见了，我也不知道哪些文件是要永久留盘，哪些是被free up space的。。哎，这咋整呢。。</p>
-<h2 id="01-"><strong>01 尝试各种重启重装</strong></h2>
+<h2 id="01-尝试各种重启重装"><strong>01 尝试各种重启重装</strong></h2>
 <p>虽然这bug很奇怪，但是毕竟是Catalina，bug多一点也没啥，那就先老规矩重启重装大法。</p>
 <ul>
 <li>系统重启 =&gt; 无駄だ（mudada）</li>
@@ -166,7 +166,7 @@
 <li>Onedrive花样重装（官网安装包） =&gt; 无駄だ</li>
 <li>Nutstore重装 =&gt; 无駄だ</li>
 </ul>
-<h2 id="02-"><strong>02 上网搜，问客服啊</strong></h2>
+<h2 id="02-上网搜问客服啊"><strong>02 上网搜，问客服啊</strong></h2>
 <p>一筹莫展之际，无心再做别的事（其实是快过年心里有点躁动）</p>
 <p>劳资遇到这种问题，别人说不定也遇到过，上网搜，结果就只有 Microsoft 官方的形式回答</p>
 <p><a href="https://answers.microsoft.com/en-us/msoffice/forum/all/no-sync-icons-in-finder/d5177b10-4fb2-4ad1-a1d1-08729abd4042">Microsoft Community: No sync icons in Finder</a></p>
@@ -188,7 +188,7 @@
 <li>之后把 <code>iCloud Drive</code> 和 <code>Dropbox Finder Extension</code> 都打开，也都没啥问题。</li>
 <li>最后打开了 <code>Easy New File Extension</code> 这个传说中引起冲突的开关，发现竟然也都没事，onedrive和nutstore的绿色小勾都还在。</li>
 </ul>
-<h2 id="03-"><strong>03 总结</strong></h2>
+<h2 id="03-总结"><strong>03 总结</strong></h2>
 <p>刚刚废话这么久其实可以总结成一点，就是 <code>Easy New File Extension</code> 就是冲突开关，这个插件不能早于其他插件打开，不然其他插件就会无法生效。</p>
 <p>正确的做法就是：先开启别的插件（onedrive、nutstore），等它们都生效后再打开 EasyNewFile插件。</p>
 <p>对了，还想说一下Nutstore的客服态度真的好好啊，聊天非常愉快，而且帮我解决了问题。</p>

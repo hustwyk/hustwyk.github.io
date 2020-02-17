@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.0 with theme even" />
 
 
 <link rel="canonical" href="http://hollybee.wang/post/androidencodesection/" />
@@ -141,10 +141,10 @@
   </div>
 </div>
     <div class="post-content">
-      <p>在赵四的文章<a href="https://blog.csdn.net/jiangwei0910410003/article/details/49962173">《Android逆向之旅&mdash;基于对so中的section加密技术实现so加固》</a>中，已经很详尽的介绍了对so库的section加密并在内存中解密的过程，但是四哥的方法改动了<code>shoff</code>(section header offset)，这个在android7.0之后是不能work的，因为7.0之后android对so库elf头中关于section部分的进行了校验，修改<code>shoff</code>会导致so库加载后不能运行，本文的是借助了四哥的另一篇文章的方法来解决的这个问题。</p>
+      <p>在赵四的文章<a href="http://www.520monkey.com/archives/565">《Android逆向之旅&mdash;基于对so中的section加密技术实现so加固》</a>中，已经很详尽的介绍了对so库的section加密并在内存中解密的过程，但是四哥的方法改动了<code>shoff</code>(section header offset)，这个在android7.0之后是不能work的，因为7.0之后android对so库elf头中关于section部分的进行了校验，修改<code>shoff</code>会导致so库加载后不能运行，本文的是借助了四哥的另一篇文章的方法来解决的这个问题。</p>
 <p>四哥的这个加密section的方法中，将加密section的长度和加密section的偏移分别保存在elf header中的entry和shoff字段，修改entry字段的方法在android7.0之后是可行的，但是为了在之后解密过程中找到加密section，加密section的size和offset是少不了的（当然我也尝试过别的方法，之后再说），但是我没有再找到能添加的地方了（32位so库的section size和offset都是4byte，无法压缩到一个entry中），于是就“简单粗暴”的直接加个新的section，把加密section的size和offset存放在新的section里，再把新的section的offset存放到entry中，这不就解决了这个问题嘛，过程图我也画了一下。
 <img src="/images/androidEncodeSection/1.png" alt="Local Picture" title="ELF结构图"></p>
-<p>四哥的另一篇文章<a href="https://blog.csdn.net/jiangwei0910410003/article/details/49361281">《Android逆向之旅&mdash;Android应用的汉化功能(修改SO中的字符串内容)》</a>中，介绍了几种如何修改so库中的字符串内容的方法，其中一种是向so库中添加section，于是按照这篇文章实现了新section的添加。</p>
+<p>四哥的另一篇文章<a href="http://www.520monkey.com/archives/561">《Android逆向之旅&mdash;Android应用的汉化功能(修改SO中的字符串内容)》</a>中，介绍了几种如何修改so库中的字符串内容的方法，其中一种是向so库中添加section，于是按照这篇文章实现了新section的添加。</p>
 <p>解密过程参考四哥section加密的文章，其中解密函数修改如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

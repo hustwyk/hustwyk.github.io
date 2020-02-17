@@ -49,7 +49,7 @@
       <pubDate>Fri, 15 Mar 2019 09:38:37 +0800</pubDate>
       
       <guid>http://hollybee.wang/post/androidencodesection/</guid>
-      <description>&lt;p&gt;在赵四的文章&lt;a href=&#34;https://blog.csdn.net/jiangwei0910410003/article/details/49962173&#34;&gt;《Android逆向之旅&amp;mdash;基于对so中的section加密技术实现so加固》&lt;/a&gt;中，已经很详尽的介绍了对so库的section加密并在内存中解密的过程，但是四哥的方法改动了&lt;code&gt;shoff&lt;/code&gt;(section header offset)，这个在android7.0之后是不能work的，因为7.0之后android对so库elf头中关于section部分的进行了校验，修改&lt;code&gt;shoff&lt;/code&gt;会导致so库加载后不能运行，本文的是借助了四哥的另一篇文章的方法来解决的这个问题。&lt;/p&gt;</description>
+      <description>&lt;p&gt;在赵四的文章&lt;a href=&#34;http://www.520monkey.com/archives/565&#34;&gt;《Android逆向之旅&amp;mdash;基于对so中的section加密技术实现so加固》&lt;/a&gt;中，已经很详尽的介绍了对so库的section加密并在内存中解密的过程，但是四哥的方法改动了&lt;code&gt;shoff&lt;/code&gt;(section header offset)，这个在android7.0之后是不能work的，因为7.0之后android对so库elf头中关于section部分的进行了校验，修改&lt;code&gt;shoff&lt;/code&gt;会导致so库加载后不能运行，本文的是借助了四哥的另一篇文章的方法来解决的这个问题。&lt;/p&gt;</description>
     </item>
     
     <item>
