@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Xcare</copyright>
-    <lastBuildDate>Thu, 16 Jan 2020 09:45:32 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 27 Feb 2020 09:15:26 +0800</lastBuildDate>
     
 	<atom:link href="http://hollybee.wang/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flash</title>
+      <link>http://hollybee.wang/categories/flash/</link>
+      <pubDate>Thu, 27 Feb 2020 09:15:26 +0800</pubDate>
+      
+      <guid>http://hollybee.wang/categories/flash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lineage</title>
+      <link>http://hollybee.wang/categories/lineage/</link>
+      <pubDate>Thu, 27 Feb 2020 09:15:26 +0800</pubDate>
+      
+      <guid>http://hollybee.wang/categories/lineage/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Extension</title>

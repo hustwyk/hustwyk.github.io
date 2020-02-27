@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Flash LineageOS on Mi4 - @Xcare.blog()</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Xcare" /><meta name="description" content="Objective: flash Lineage OS on Mi4. Ahead of that, repartition the disk to increase /system space" /><meta name="keywords" content="Lineage, Mi4, Xiaomi, Flash" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.64.0 with theme even" />
+
+
+<link rel="canonical" href="http://hollybee.wang/post/flashlineageosonmi4/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<link href="/dist/even.defdb831.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Flash LineageOS on Mi4" />
+<meta property="og:description" content="Objective: flash Lineage OS on Mi4. Ahead of that, repartition the disk to increase /system space" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://hollybee.wang/post/flashlineageosonmi4/" />
+<meta property="article:published_time" content="2020-02-27T09:15:26+08:00" />
+<meta property="article:modified_time" content="2020-02-27T09:15:26+08:00" />
+<meta itemprop="name" content="Flash LineageOS on Mi4">
+<meta itemprop="description" content="Objective: flash Lineage OS on Mi4. Ahead of that, repartition the disk to increase /system space">
+<meta itemprop="datePublished" content="2020-02-27T09:15:26&#43;08:00" />
+<meta itemprop="dateModified" content="2020-02-27T09:15:26&#43;08:00" />
+<meta itemprop="wordCount" content="3194">
+
+
+
+<meta itemprop="keywords" content="Lineage,Flash," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Flash LineageOS on Mi4"/>
+<meta name="twitter:description" content="Objective: flash Lineage OS on Mi4. Ahead of that, repartition the disk to increase /system space"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">@Xcare.blog()</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">@Xcare.blog()</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Flash LineageOS on Mi4</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-02-27 </span>
+        <div class="post-category">
+            <a href="/categories/lineage/"> Lineage </a>
+            <a href="/categories/flash/"> Flash </a>
+            </div>
+          <span class="more-meta"> 3194 words </span>
+          <span class="more-meta"> 7 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#00-起因">00 起因</a></li>
+    <li><a href="#02-刷机">02 刷机</a></li>
+    <li><a href="#03-重新分区">03 重新分区</a></li>
+    <li><a href="#04-刷open-gapps">04 刷Open GApps</a></li>
+    <li><a href="#05-刷入magisk">05 刷入Magisk</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>记一次给Mi4刷Lineage的经过。</p>
+<h2 id="00-起因">00 起因</h2>
+<p>手头上正好有了一个旧的Mi4，拿来刷个系统当测试机还勉强能用，正好听闻Lineage可以<strong>网络ADB调试</strong>（其实是没钱买pixel，又想用新版本Android）。</p>
+<p>话不多说，直接上Lineage官网，发现<strong>Mi3/Mi4</strong>的选项已经变成灰色了，官方说已经停止更新支持了，但是有兴趣的开发者可以自己编译，那就编吧。</p>
+<p><img src="/images/FlashLineageOSonMi4/Lineage_Mi4.png" alt="Local Picture" title="Lineage_Mi4"></p>
+<p>整了个台式（256的mac空间捉急），装了VM+Ubuntu，配好了<strong>ladder</strong>，开始<code>repo sync</code>，家里的百兆跑满了带宽，心满意足的下楼散个步。。。回来的时候已经sync完了，发现竟然跑了25个GB（QAQ，一个月ladder流量才60GB）。然后按照官方的<a href="https://wiki.lineageos.org/devices/cancro/build"><strong>Build for cancro</strong></a>，结果发现sync得到的repo里面的内容和文件以及和instruction里的不一致了，有关cancro的文件都不见了，<code>breakfast cancro</code> 执行后竟然告诉我 <strong>Don&rsquo;t have a product spec for: &lsquo;lineage_cancro&rsquo;</strong>，官方不支持后，连repo都清理干净了，然而流量不允许我再去找旧的repo了，还是去找现成的rom吧。。。=_=</p>
+<p>之后找到了三个现成的rom，两个是老外编的基于Android8.1和Android9，还有个基于Android9的是国内论坛上找到的。</p>
+<h2 id="02-刷机">02 刷机</h2>
+<p>可以参考<a href="https://wiki.lineageos.org/devices/cancro/install"><strong>官方刷机教程</strong></a></p>
+<p>还是记录一下刷机的教程，方便以后再折腾。</p>
+<p>首先，电脑上安装<strong>adb</strong>和<strong>fastboot</strong>，不会的参考上方官方刷机教程，如果做过android开发，sdk里自带的就有。</p>
+<p>然后，手机解锁，就是解Boot Loader锁俗称BL锁，解完才能刷入新的Recovery镜像（就像Bios一样），刷入合适的Recovery才能去刷入新系统（Recovery模式下可以挂载系统分区修改系统文件），比较常用的第三方Recovery就是<a href="https://twrp.me/"><strong>TWRP</strong></a>，然后在Devices里找到<strong>和自己机型适配的</strong>（<em>很关键</em>）（Mi3和Mi4代号都是cancro，因为硬件基本一致，所以我就选了Xiaomi Mi 3 (cancro)），下完命名<strong>recovery.img</strong>，方便刷入。</p>
+<p>然后，手机连上电脑，允许USB调试，<code>adb reboot bootloader</code>或者<strong>Volume Down</strong> + <strong>Power</strong>进入<strong>FastBoot</strong>模式，命令行<code>fastboot devices</code>可以看到设备号就可以说明此时<strong>设备已就绪</strong>（<em>很关键</em>），之后<code>fastboot flash recovery recovery.img</code>,好了后再<code>fastboot boot recovery.img</code>或者<strong>Volume Up</strong> + <strong>Power</strong>进入Recovery模式，此时能看到TWRP熟悉的界面（常见就不放图了）。</p>
+<p>然后清空手机，点击<strong>Wipe</strong>，然后点<strong>Format Data</strong>，滑动确定，“这将会移除加密并且删除存储在内部存储里的所有文件”（翻译官方教程）。返回到之前菜单，点击<strong>Advanced Wipe</strong>，然后选择<strong>Cache</strong>和<strong>System</strong>分区并滑动清除。</p>
+<p>然后返回到TWRP开始界面，点击<strong>Advanced</strong>，选择<strong>ADB Sideload</strong>，滑动确定，设备进入了等待adb sideload状态，此时在电脑上找到rom包的目录，运行<code>adb sideload Lineage_xxxx.zip</code>，然后喝口茶等它慢慢刷入。因为比较想体验新系统，我就选择了国外的那个基于Android9的包。</p>
+<p>官网上还推荐了刷入Additional packages比如<strong>Google Apps</strong>，其实就是Google框架，比较常用的包是<a href="https://opengapps.org/"><strong>Open GApps</strong></a>，里面有四种CPU架构，Android4.4-10.0版本，以及包内容的定制选项，鼠标放在选项上会有说明，很详细的，我就选个推荐的<strong>stock</strong>包吧。然后和上面一样的Sideload方法刷入，然后到6%的时候手机上开始出现Open GApps的logo，并开始刷入处理，然而它喵的告诉我/system分区空间不够，我看stock包有651MB，然后就去下载了<strong>pico</strong>包，这个才109MB，再次刷入，还是告诉我/system分区空间不够，提示我去看一眼日志，<code>adb shell</code>进去，去/<strong>sdcard</strong>/下看一下log文件，发现还差了一些空间，<code>fdisk -ul /dev/block/mmcblk0</code>看一下各个分区大小，发现/system只有1342MB，系统已经占了快1GB了，话不多说，直接重新分区。</p>
+<h2 id="03-重新分区">03 重新分区</h2>
+<p>需要parted工具，之后搭配重新分区脚本，工具放网盘了: <a href="https://pan.baidu.com/s/1hY4D1oFxlocHo-fAS_NnYw">https://pan.baidu.com/s/1hY4D1oFxlocHo-fAS_NnYw</a>  密码:ukhw</p>
+<p>在Recovery下将parted文件复制到/sbin目录下，将repartition脚本复制到根目录/下，将二者的权限修改为755.</p>
+<p><strong>adb shell</strong>下运行<code>parted /dev/block/mmcblk0 print</code>打印当前分区详情</p>
+<p><img src="/images/FlashLineageOSonMi4/old_partition.png" alt="Local Picture" title="old_partition"></p>
+<p><em>注意：如果system分区的起始位置不是403MB，需要修改为实际位置</em></p>
+<p>重新分区脚本如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cmd" data-lang="cmd">#!/sbin/sh
+# 卸载分区
+  umount -l /system
+  umount -l /cache
+  umount -l /system
+  umount -l /dev/block/mmcblk0p23
+  umount -l /dev/block/mmcblk0p24
+  umount -l /dev/block/mmcblk0p25
+
+# 删除分区
+  parted /dev/block/mmcblk0 rm 23
+  parted /dev/block/mmcblk0 rm 24
+  parted /dev/block/mmcblk0 rm 25
+
+# 新建分区
+  parted /dev/block/mmcblk0 mkpart primary 403MB 3940MB
+  parted /dev/block/mmcblk0 mkpart primary 3940MB 4348MB
+  parted /dev/block/mmcblk0 mkpart primary 4348MB 15.8GB
+	
+# 命名分区
+  parted /dev/block/mmcblk0 name 23 system
+  parted /dev/block/mmcblk0 name 24 cache
+  parted /dev/block/mmcblk0 name 25 userdata
+
+# 重新卸载分区
+  umount -l /system
+  umount -l /cache
+  umount -l /userdata
+  umount -l /dev/block/mmcblk0p23
+  umount -l /dev/block/mmcblk0p24
+  umount -l /dev/block/mmcblk0p25
+
+# 格式化分区，cache，userdata将默认的5%保留空间改为0
+  mke2fs -b 4096 -T ext4 /dev/block/mmcblk0p23
+  mke2fs -b 4096 -T ext4 -m 0 /dev/block/mmcblk0p24
+  mke2fs -b 4096 -T ext4 -m 0 /dev/block/mmcblk0p25
+</code></pre></td></tr></table>
+</div>
+</div><p>运行重新分区脚本<code>./repartition</code>，过程中有&quot;umount&quot;和&quot;information&quot;的警告信息，可以不用管。</p>
+<p>重启Recovery，进入adb，使用<code>fdisk -ul /dev/block/mmcblk0</code>查看分区是否成功。</p>
+<h2 id="04-刷open-gapps">04 刷Open GApps</h2>
+<p>这次system大小该足够了，<code>Sideload</code>刷入pico包，结果特nima还报我空间不够。。=_=#</p>
+<p>然后网上还看到一个可以查看实际rom分区信息：TWRP里点<code>Wipe</code>，然后点<code>Advanced Wipe</code>，选择<code>System</code>分区，点击<code>Repair or Change File System</code>，可以看到system分区实际大小，已占用大小，剩余大小等信息。这些其实是rom真实分配的空间大小。幸好有个选项<code>Resize File System</code>，然而当我点击后，报了个<code>e2fsck</code>的错误，真让人摸不着头脑。e2fsck是linux系统下管理磁盘分区的，Android系统中一般在/sbin下，是系统自带的，怎么还会出毛病，我怀疑这个第三方编译的系统包可能有点“暗伤”。</p>
+<p>那就换成基于Android8.1的国外的那个包，重新刷遍系统，再下载匹配的Open GApps的pico包。刷入前在TWRP里Resize一下System分区，很流畅，然后System分区变成了预先设定的3.3GB了（之所以这么大是因为担心以后还会刷软件）（还有，官网教程里强调在初次运行系统<strong>之前</strong>把Open GApps包刷进去，但是我试过了，运行之后再刷也不碍事，因为其原理就是卸载Lineage里的一些系统包，然后替换成Google原生的，但是如果用过一段时间再刷会不会跪掉呢，这个可以过段时间再试），然后Sideload刷入Open GApps包非常顺利，然后启动等系统慢慢加载好，就是一个<strong>带有Google框架的Lineage15.1 OS的Mi4</strong>了。</p>
+<p>这个包的下载地址为： <a href="https://androidfilehost.com/?w=files&amp;flid=213298">https://androidfilehost.com/?w=files&amp;flid=213298</a></p>
+<p>或者给云盘链接： 链接:https://pan.baidu.com/s/1X1yfxczsTGCcxeperuVe2g  密码:m2nj</p>
+<p>至于国内的那个包，刷上后一堆自带应用，360全家桶blabla的，而且体态庞大，不流畅而且发热，故排除。</p>
+<h2 id="05-刷入magisk">05 刷入Magisk</h2>
+<p>Magisk是现在root手机的神器，听说还是台湾小伙开发的，赞一个。</p>
+<p>去其<a href="https://github.com/topjohnwu/Magisk/releases"><strong>Github Release</strong></a>上下载最新版<code>Magisk.zip</code>包和<code>MagiskManager.apk</code>，然后Recovery下<strong>sideload</strong>刷入zip包，启动系统后<strong>adb install</strong>刷入Magisk APK，然后就可以嗨皮了。</p>
+    </div>
+
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/wechat.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/alipay.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/lineage/">Lineage</a>
+          <a href="/tags/flash/">Flash</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/syncsoftwarefinder/">
+            <span class="next-text nav-default">Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'hollybee-wang';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2020-02-27 09:15:26 \x2b0800 CST',
+        title: 'Flash LineageOS on Mi4',
+        clientID: '6ec2d4e18a02ee89da4e',
+        clientSecret: 'f2443f8af6b97e6700dd65a6605fbdc444903943',
+        repo: 'BlogComments',
+        owner: 'hustwyk',
+        admin: ['hustwyk'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:hustwyk@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/YorkLynn2" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/InconWong" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://github.com/hustwyk" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/anna-daisy-5/activities" class="iconfont icon-zhihu" title="zhihu"></a>
+  <a href="http://hollybee.wang/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Xcare</span>
+  </span>
+  <a href="http://www.miitbeian.gov.cn" target="_blank" style="color:#ccc;text-decoration:none;font-size:14px;">京ICP备18057338号</a>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.67e0238c.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-129663555-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
