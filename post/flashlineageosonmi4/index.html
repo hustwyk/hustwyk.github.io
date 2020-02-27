@@ -48,7 +48,7 @@
 <meta itemprop="description" content="Objective: flash Lineage OS on Mi4. Ahead of that, repartition the disk to increase /system space">
 <meta itemprop="datePublished" content="2020-02-27T09:15:26&#43;08:00" />
 <meta itemprop="dateModified" content="2020-02-27T09:15:26&#43;08:00" />
-<meta itemprop="wordCount" content="3194">
+<meta itemprop="wordCount" content="3151">
 
 
 
@@ -129,7 +129,7 @@
             <a href="/categories/lineage/"> Lineage </a>
             <a href="/categories/flash/"> Flash </a>
             </div>
-          <span class="more-meta"> 3194 words </span>
+          <span class="more-meta"> 3151 words </span>
           <span class="more-meta"> 7 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -256,7 +256,7 @@
 <h2 id="04-刷open-gapps">04 刷Open GApps</h2>
 <p>这次system大小该足够了，<code>Sideload</code>刷入pico包，结果特nima还报我空间不够。。=_=#</p>
 <p>然后网上还看到一个可以查看实际rom分区信息：TWRP里点<code>Wipe</code>，然后点<code>Advanced Wipe</code>，选择<code>System</code>分区，点击<code>Repair or Change File System</code>，可以看到system分区实际大小，已占用大小，剩余大小等信息。这些其实是rom真实分配的空间大小。幸好有个选项<code>Resize File System</code>，然而当我点击后，报了个<code>e2fsck</code>的错误，真让人摸不着头脑。e2fsck是linux系统下管理磁盘分区的，Android系统中一般在/sbin下，是系统自带的，怎么还会出毛病，我怀疑这个第三方编译的系统包可能有点“暗伤”。</p>
-<p>那就换成基于Android8.1的国外的那个包，重新刷遍系统，再下载匹配的Open GApps的pico包。刷入前在TWRP里Resize一下System分区，很流畅，然后System分区变成了预先设定的3.3GB了（之所以这么大是因为担心以后还会刷软件）（还有，官网教程里强调在初次运行系统<strong>之前</strong>把Open GApps包刷进去，但是我试过了，运行之后再刷也不碍事，因为其原理就是卸载Lineage里的一些系统包，然后替换成Google原生的，但是如果用过一段时间再刷会不会跪掉呢，这个可以过段时间再试），然后Sideload刷入Open GApps包非常顺利，然后启动等系统慢慢加载好，就是一个<strong>带有Google框架的Lineage15.1 OS的Mi4</strong>了。</p>
+<p>那就换成基于Android8.1的国外的那个包，重新刷遍系统，再下载匹配的Open GApps的pico包。刷入前在TWRP里Resize一下System分区，很流畅，然后System分区变成了预先设定的3.3GB了（之所以这么大是因为担心以后还会刷软件）（还有，官网教程里强调在初次运行系统<strong>之前</strong>把Open GApps包刷进去，我试过运行一次Lineage后再刷入Open GApps，发现Google服务框架会崩掉），然后Sideload刷入Open GApps包非常顺利，然后启动等系统慢慢加载好，就是一个<strong>带有Google框架的Lineage15.1 OS的Mi4</strong>了。</p>
 <p>这个包的下载地址为： <a href="https://androidfilehost.com/?w=files&amp;flid=213298">https://androidfilehost.com/?w=files&amp;flid=213298</a></p>
 <p>或者给云盘链接： 链接:https://pan.baidu.com/s/1X1yfxczsTGCcxeperuVe2g  密码:m2nj</p>
 <p>至于国内的那个包，刷上后一堆自带应用，360全家桶blabla的，而且体态庞大，不流畅而且发热，故排除。</p>
