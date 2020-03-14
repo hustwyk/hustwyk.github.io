@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Xcare</copyright>
-    <lastBuildDate>Thu, 27 Feb 2020 09:15:26 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Oct 2018 20:38:52 +0800</lastBuildDate>
     
 	<atom:link href="http://hollybee.wang/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,6 +23,15 @@
   Location - SKLOIS | Beijing CN
   Theme - Even
  </description>
+    </item>
+    
+    <item>
+      <title>Shallow &amp; Deep Copy in Python3</title>
+      <link>http://hollybee.wang/post/shallowdeepcopyinpy/</link>
+      <pubDate>Sat, 14 Mar 2020 22:14:54 +0800</pubDate>
+      
+      <guid>http://hollybee.wang/post/shallowdeepcopyinpy/</guid>
+      <description>&lt;p&gt;记一次python上关于List深浅拷贝的试错。&lt;/p&gt;</description>
     </item>
     
     <item>

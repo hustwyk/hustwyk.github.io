@@ -9,15 +9,43 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/</loc>
-    <lastmod>2020-02-27T09:15:26+08:00</lastmod>
+    <loc>http://hollybee.wang/categories/</loc>
+    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://hollybee.wang/categories/</loc>
-    <lastmod>2020-02-27T09:15:26+08:00</lastmod>
+    <loc>http://hollybee.wang/post/</loc>
+    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/tags/python/</loc>
+    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/categories/python/</loc>
+    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/post/shallowdeepcopyinpy/</loc>
+    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/tags/</loc>
+    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -58,28 +86,14 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/post/</loc>
-    <lastmod>2020-02-27T09:15:26+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://hollybee.wang/tags/</loc>
-    <lastmod>2020-02-27T09:15:26+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://hollybee.wang/categories/extension/</loc>
+    <loc>http://hollybee.wang/tags/extension/</loc>
     <lastmod>2020-01-16T09:45:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/extension/</loc>
+    <loc>http://hollybee.wang/categories/extension/</loc>
     <lastmod>2020-01-16T09:45:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -156,13 +170,6 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/categories/social-engineering/</loc>
-    <lastmod>2019-03-10T14:04:13+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>http://hollybee.wang/tags/social-engineering/</loc>
     <lastmod>2019-03-10T14:04:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -170,7 +177,7 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/categories/trace/</loc>
+    <loc>http://hollybee.wang/categories/social-engineering/</loc>
     <lastmod>2019-03-10T14:04:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -178,6 +185,13 @@
   
   <url>
     <loc>http://hollybee.wang/tags/trace/</loc>
+    <lastmod>2019-03-10T14:04:13+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://hollybee.wang/categories/trace/</loc>
     <lastmod>2019-03-10T14:04:13+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -212,6 +226,13 @@
   </url>
   
   <url>
+    <loc>http://hollybee.wang/tags/security/</loc>
+    <lastmod>2019-04-19T15:43:44+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://hollybee.wang/categories/security/</loc>
     <lastmod>2019-04-19T15:43:44+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -219,8 +240,8 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/security/</loc>
-    <lastmod>2019-04-19T15:43:44+08:00</lastmod>
+    <loc>http://hollybee.wang/</loc>
+    <lastmod>2018-11-21T22:36:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -254,14 +275,14 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/categories/nvidia/</loc>
+    <loc>http://hollybee.wang/tags/nvidia/</loc>
     <lastmod>2018-04-15T20:48:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/nvidia/</loc>
+    <loc>http://hollybee.wang/categories/nvidia/</loc>
     <lastmod>2018-04-15T20:48:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -275,14 +296,14 @@
   </url>
   
   <url>
-    <loc>http://hollybee.wang/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <loc>http://hollybee.wang/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
     <lastmod>2018-04-15T20:48:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>http://hollybee.wang/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
+    <loc>http://hollybee.wang/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</loc>
     <lastmod>2018-04-15T20:48:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

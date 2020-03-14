@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.0 with theme even" />
+<meta name="generator" content="Hugo 0.65.3 with theme even" />
 
 
 <link rel="canonical" href="http://hollybee.wang/post/androidencodesection/" />
@@ -210,7 +210,7 @@
 </span><span class="lnt">60
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">init_getString</span><span class="o">(</span><span class="o">)</span><span class="o">{</span>
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="kt">void</span> <span class="nf">init_getString</span><span class="o">(){</span>
     <span class="kt">int</span> <span class="n">successFlag</span> <span class="o">=</span> <span class="n">1</span><span class="o">;</span>
     <span class="n">unsigned</span> <span class="kt">int</span> <span class="n">mySectionSize</span><span class="o">;</span>
     <span class="n">unsigned</span> <span class="kt">int</span> <span class="n">mySectionOffset</span><span class="o">;</span>
@@ -225,49 +225,49 @@
     <span class="n">Elf32_Ehdr</span> <span class="o">*</span><span class="n">ehdr</span><span class="o">;</span>
 
     <span class="c1">//获取so的起始地址
-</span><span class="c1"></span>    <span class="n">base</span> <span class="o">=</span> <span class="n">getLibAddr</span><span class="o">(</span><span class="o">)</span><span class="o">;</span>
+</span><span class="c1"></span>    <span class="n">base</span> <span class="o">=</span> <span class="n">getLibAddr</span><span class="o">();</span>
     
-    <span class="n">ehdr</span> <span class="o">=</span> <span class="o">(</span><span class="n">Elf32_Ehdr</span> <span class="o">*</span><span class="o">)</span><span class="n">base</span><span class="o">;</span>
+    <span class="n">ehdr</span> <span class="o">=</span> <span class="o">(</span><span class="n">Elf32_Ehdr</span> <span class="o">*)</span><span class="n">base</span><span class="o">;</span>
 
     <span class="c1">//获取新加section的偏移值
-</span><span class="c1"></span>    <span class="n">addNewSectionOffset</span> <span class="o">=</span> <span class="n">ehdr</span><span class="o">-</span><span class="o">&gt;</span><span class="n">e_entry</span><span class="o">;</span>
+</span><span class="c1"></span>    <span class="n">addNewSectionOffset</span> <span class="o">=</span> <span class="n">ehdr</span><span class="o">-&gt;</span><span class="n">e_entry</span><span class="o">;</span>
     
     <span class="c1">//从内存读取加密section的offset和size
-</span><span class="c1"></span>    <span class="n">mySectionOffset</span> <span class="o">=</span> <span class="o">*</span><span class="o">(</span><span class="n">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="o">)</span><span class="o">(</span><span class="n">base</span> <span class="o">+</span> <span class="n">addNewSectionOffset</span><span class="o">)</span><span class="o">;</span>
+</span><span class="c1"></span>    <span class="n">mySectionOffset</span> <span class="o">=</span> <span class="o">*(</span><span class="n">unsigned</span> <span class="kt">int</span> <span class="o">*)(</span><span class="n">base</span> <span class="o">+</span> <span class="n">addNewSectionOffset</span><span class="o">);</span>
     <span class="n">text_addr</span> <span class="o">=</span> <span class="n">mySectionOffset</span> <span class="o">+</span> <span class="n">base</span><span class="o">;</span>
 
-    <span class="n">mySectionSize</span> <span class="o">=</span> <span class="o">*</span><span class="o">(</span><span class="n">unsigned</span> <span class="kt">int</span> <span class="o">*</span><span class="o">)</span> <span class="o">(</span><span class="n">base</span> <span class="o">+</span> <span class="n">addNewSectionOffset</span> <span class="o">+</span> <span class="n">4</span><span class="o">)</span><span class="o">;</span>
-    <span class="n">nsize</span> <span class="o">=</span> <span class="n">mySectionSize</span><span class="o">/</span><span class="n">4096</span> <span class="o">+</span> <span class="o">(</span><span class="n">mySectionSize</span><span class="o">%</span><span class="n">4096</span> <span class="o">=</span><span class="o">=</span> <span class="n">0</span> <span class="o">?</span> <span class="n">0</span> <span class="o">:</span> <span class="n">1</span><span class="o">)</span><span class="o">;</span>
+    <span class="n">mySectionSize</span> <span class="o">=</span> <span class="o">*(</span><span class="n">unsigned</span> <span class="kt">int</span> <span class="o">*)</span> <span class="o">(</span><span class="n">base</span> <span class="o">+</span> <span class="n">addNewSectionOffset</span> <span class="o">+</span> <span class="n">4</span><span class="o">);</span>
+    <span class="n">nsize</span> <span class="o">=</span> <span class="n">mySectionSize</span><span class="o">/</span><span class="n">4096</span> <span class="o">+</span> <span class="o">(</span><span class="n">mySectionSize</span><span class="o">%</span><span class="n">4096</span> <span class="o">==</span> <span class="n">0</span> <span class="o">?</span> <span class="n">0</span> <span class="o">:</span> <span class="n">1</span><span class="o">);</span>
 
-    <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;addNewSectionOffset = 0x%x, addNewSectionVirtualOffset =  0x%x&#34;</span><span class="o">,</span> <span class="n">addNewSectionOffset</span><span class="o">,</span> <span class="n">addNewSectionOffset</span> <span class="o">+</span> <span class="n">base</span><span class="o">)</span><span class="o">;</span>
-    <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;mySectionOffset = 0x%x, mySectionSize =  0x%x, nsize:%d&#34;</span><span class="o">,</span> <span class="n">mySectionOffset</span><span class="o">,</span> <span class="n">mySectionSize</span><span class="o">,</span> <span class="n">nsize</span><span class="o">)</span><span class="o">;</span>
-    <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;mySectionVirtualOffset =  0x%x&#34;</span><span class="o">,</span> <span class="n">text_addr</span><span class="o">)</span><span class="o">;</span>
-    <span class="n">printf</span><span class="o">(</span><span class="s">&#34;mySectionSize = %d\n&#34;</span><span class="o">,</span> <span class="n">mySectionSize</span><span class="o">)</span><span class="o">;</span>
+    <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;addNewSectionOffset = 0x%x, addNewSectionVirtualOffset =  0x%x&#34;</span><span class="o">,</span> <span class="n">addNewSectionOffset</span><span class="o">,</span> <span class="n">addNewSectionOffset</span> <span class="o">+</span> <span class="n">base</span><span class="o">);</span>
+    <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;mySectionOffset = 0x%x, mySectionSize =  0x%x, nsize:%d&#34;</span><span class="o">,</span> <span class="n">mySectionOffset</span><span class="o">,</span> <span class="n">mySectionSize</span><span class="o">,</span> <span class="n">nsize</span><span class="o">);</span>
+    <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;mySectionVirtualOffset =  0x%x&#34;</span><span class="o">,</span> <span class="n">text_addr</span><span class="o">);</span>
+    <span class="n">printf</span><span class="o">(</span><span class="s">&#34;mySectionSize = %d\n&#34;</span><span class="o">,</span> <span class="n">mySectionSize</span><span class="o">);</span>
 
     <span class="c1">//修改内存的操作权限
-</span><span class="c1"></span>    <span class="k">if</span><span class="o">(</span><span class="n">mprotect</span><span class="o">(</span><span class="o">(</span><span class="kt">void</span> <span class="o">*</span><span class="o">)</span> <span class="o">(</span><span class="n">text_addr</span> <span class="o">/</span> <span class="n">PAGE_SIZE</span> <span class="o">*</span> <span class="n">PAGE_SIZE</span><span class="o">)</span><span class="o">,</span> <span class="n">4096</span> <span class="o">*</span> <span class="n">nsize</span><span class="o">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_EXEC</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="o">)</span> <span class="o">!</span><span class="o">=</span> <span class="n">0</span><span class="o">)</span><span class="o">{</span>
-        <span class="n">puts</span><span class="o">(</span><span class="s">&#34;mem privilege change failed&#34;</span><span class="o">)</span><span class="o">;</span>
-        <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;mem privilege change failed&#34;</span><span class="o">)</span><span class="o">;</span>
+</span><span class="c1"></span>    <span class="k">if</span><span class="o">(</span><span class="n">mprotect</span><span class="o">((</span><span class="kt">void</span> <span class="o">*)</span> <span class="o">(</span><span class="n">text_addr</span> <span class="o">/</span> <span class="n">PAGE_SIZE</span> <span class="o">*</span> <span class="n">PAGE_SIZE</span><span class="o">),</span> <span class="n">4096</span> <span class="o">*</span> <span class="n">nsize</span><span class="o">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_EXEC</span> <span class="o">|</span> <span class="n">PROT_WRITE</span><span class="o">)</span> <span class="o">!=</span> <span class="n">0</span><span class="o">){</span>
+        <span class="n">puts</span><span class="o">(</span><span class="s">&#34;mem privilege change failed&#34;</span><span class="o">);</span>
+        <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;mem privilege change failed&#34;</span><span class="o">);</span>
         <span class="n">successFlag</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
     <span class="o">}</span>
     <span class="c1">//解密
-</span><span class="c1"></span>    <span class="k">for</span><span class="o">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">mySectionSize</span><span class="o">;</span> <span class="n">i</span><span class="o">+</span><span class="o">+</span><span class="o">)</span><span class="o">{</span>
-        <span class="kt">char</span> <span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="o">(</span><span class="kt">char</span><span class="o">*</span><span class="o">)</span><span class="o">(</span><span class="n">text_addr</span> <span class="o">+</span> <span class="n">i</span><span class="o">)</span><span class="o">;</span>
-        <span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="o">~</span><span class="o">(</span><span class="o">*</span><span class="n">addr</span><span class="o">)</span><span class="o">;</span>
+</span><span class="c1"></span>    <span class="k">for</span><span class="o">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">mySectionSize</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
+        <span class="kt">char</span> <span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="o">(</span><span class="kt">char</span><span class="o">*)(</span><span class="n">text_addr</span> <span class="o">+</span> <span class="n">i</span><span class="o">);</span>
+        <span class="o">*</span><span class="n">addr</span> <span class="o">=</span> <span class="o">~(*</span><span class="n">addr</span><span class="o">);</span>
     <span class="o">}</span>
 
-    <span class="k">if</span><span class="o">(</span><span class="n">mprotect</span><span class="o">(</span><span class="o">(</span><span class="kt">void</span> <span class="o">*</span><span class="o">)</span> <span class="o">(</span><span class="n">text_addr</span> <span class="o">/</span> <span class="n">PAGE_SIZE</span> <span class="o">*</span> <span class="n">PAGE_SIZE</span><span class="o">)</span><span class="o">,</span> <span class="n">4096</span> <span class="o">*</span> <span class="n">nsize</span><span class="o">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_EXEC</span><span class="o">)</span> <span class="o">!</span><span class="o">=</span> <span class="n">0</span><span class="o">)</span><span class="o">{</span>
-        <span class="n">puts</span><span class="o">(</span><span class="s">&#34;mem privilege change failed&#34;</span><span class="o">)</span><span class="o">;</span>
-        <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;The second mem privilege change failed&#34;</span><span class="o">)</span><span class="o">;</span>
+    <span class="k">if</span><span class="o">(</span><span class="n">mprotect</span><span class="o">((</span><span class="kt">void</span> <span class="o">*)</span> <span class="o">(</span><span class="n">text_addr</span> <span class="o">/</span> <span class="n">PAGE_SIZE</span> <span class="o">*</span> <span class="n">PAGE_SIZE</span><span class="o">),</span> <span class="n">4096</span> <span class="o">*</span> <span class="n">nsize</span><span class="o">,</span> <span class="n">PROT_READ</span> <span class="o">|</span> <span class="n">PROT_EXEC</span><span class="o">)</span> <span class="o">!=</span> <span class="n">0</span><span class="o">){</span>
+        <span class="n">puts</span><span class="o">(</span><span class="s">&#34;mem privilege change failed&#34;</span><span class="o">);</span>
+        <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;The second mem privilege change failed&#34;</span><span class="o">);</span>
         <span class="n">successFlag</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span>
     <span class="o">}</span>
 
     <span class="k">if</span> <span class="o">(</span><span class="n">successFlag</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">puts</span><span class="o">(</span><span class="s">&#34;Decrypt success&#34;</span><span class="o">)</span><span class="o">;</span>
-        <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;Decrypt success&#34;</span><span class="o">)</span><span class="o">;</span>
+        <span class="n">puts</span><span class="o">(</span><span class="s">&#34;Decrypt success&#34;</span><span class="o">);</span>
+        <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;Decrypt success&#34;</span><span class="o">);</span>
     <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-        <span class="n">puts</span><span class="o">(</span><span class="s">&#34;Decrypt fail&#34;</span><span class="o">)</span><span class="o">;</span>
-        <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;Decrypt fail&#34;</span><span class="o">)</span><span class="o">;</span>
+        <span class="n">puts</span><span class="o">(</span><span class="s">&#34;Decrypt fail&#34;</span><span class="o">);</span>
+        <span class="n">__android_log_print</span><span class="o">(</span><span class="n">ANDROID_LOG_INFO</span><span class="o">,</span> <span class="s">&#34;JNITag&#34;</span><span class="o">,</span> <span class="s">&#34;Decrypt fail&#34;</span><span class="o">);</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></td></tr></table>
