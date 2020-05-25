@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Flash on @Xcare.blog()</title>
-    <link>http://hollybee.wang/tags/flash/</link>
+    <link>https://hustwyk.github.io/tags/flash/</link>
     <description>Recent content in Flash on @Xcare.blog()</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Xcare</copyright>
     <lastBuildDate>Thu, 27 Feb 2020 09:15:26 +0800</lastBuildDate>
     
-	<atom:link href="http://hollybee.wang/tags/flash/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hustwyk.github.io/tags/flash/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Flash LineageOS on Mi4</title>
-      <link>http://hollybee.wang/post/flashlineageosonmi4/</link>
+      <link>https://hustwyk.github.io/post/flashlineageosonmi4/</link>
       <pubDate>Thu, 27 Feb 2020 09:15:26 +0800</pubDate>
       
-      <guid>http://hollybee.wang/post/flashlineageosonmi4/</guid>
+      <guid>https://hustwyk.github.io/post/flashlineageosonmi4/</guid>
       <description>&lt;p&gt;记一次给Mi4刷Lineage的经过。&lt;/p&gt;</description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>security on @Xcare.blog()</title>
-    <link>http://hollybee.wang/categories/security/</link>
+    <link>https://hustwyk.github.io/categories/security/</link>
     <description>Recent content in security on @Xcare.blog()</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Xcare</copyright>
     <lastBuildDate>Mon, 04 Mar 2019 15:43:44 +0800</lastBuildDate>
     
-	<atom:link href="http://hollybee.wang/categories/security/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://hustwyk.github.io/categories/security/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Android逆向大黄书网页收集版（根据大黄书自制）</title>
-      <link>http://hollybee.wang/post/androidappsecproandreverseanalysing/</link>
+      <link>https://hustwyk.github.io/post/androidappsecproandreverseanalysing/</link>
       <pubDate>Mon, 04 Mar 2019 15:43:44 +0800</pubDate>
       
-      <guid>http://hollybee.wang/post/androidappsecproandreverseanalysing/</guid>
+      <guid>https://hustwyk.github.io/post/androidappsecproandreverseanalysing/</guid>
       <description></description>
     </item>
     
