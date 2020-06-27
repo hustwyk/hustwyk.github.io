@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Xcare</copyright>
-    <lastBuildDate>Sat, 14 Mar 2020 22:14:54 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2020 12:13:49 +0800</lastBuildDate>
     
 	<atom:link href="https://hustwyk.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>journey</title>
+      <link>https://hustwyk.github.io/categories/journey/</link>
+      <pubDate>Fri, 26 Jun 2020 12:13:49 +0800</pubDate>
+      
+      <guid>https://hustwyk.github.io/categories/journey/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>python</title>

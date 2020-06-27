@@ -9,15 +9,43 @@
   </url>
   
   <url>
+    <loc>https://hustwyk.github.io/post/ajourney2xiamenhangzhou/</loc>
+    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://hustwyk.github.io/categories/</loc>
-    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
+    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/tags/journey/</loc>
+    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/categories/journey/</loc>
+    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://hustwyk.github.io/post/</loc>
-    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
+    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/tags/</loc>
+    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,13 +66,6 @@
   
   <url>
     <loc>https://hustwyk.github.io/post/shallowdeepcopyinpy/</loc>
-    <lastmod>2020-03-14T22:14:54+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://hustwyk.github.io/tags/</loc>
     <lastmod>2020-03-14T22:14:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
