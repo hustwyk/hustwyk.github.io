@@ -49,7 +49,7 @@
 <meta itemprop="description" content="Some problems about shallow copy and deep copy in list of python3.7.5">
 <meta itemprop="datePublished" content="2020-03-14T22:14:54&#43;08:00" />
 <meta itemprop="dateModified" content="2020-03-14T22:14:54&#43;08:00" />
-<meta itemprop="wordCount" content="723">
+<meta itemprop="wordCount" content="848">
 
 
 
@@ -129,7 +129,7 @@
         <div class="post-category">
             <a href="/categories/python/"> python </a>
             </div>
-          <span class="more-meta"> 723 words </span>
+          <span class="more-meta"> 848 words </span>
           <span class="more-meta"> 2 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -211,8 +211,8 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>嗯？怎么回事，我明明只初始化了<code>DL[0][0]</code>啊，怎么<code>DL[1][0]</code>、<code>DL[2][0]</code>全变成1了</p>
-<p>突然间回想起了大学时老师上课讲的数组深浅拷贝的问题，数组内存毕竟分配在堆上，只有引用是在栈中，简单的赋值操作只是改变了栈中变量的值，堆中的数组没有任何改动</p>
-<p>python底层实现依然是C/C++，大概率也是这种情况吧，<code>[0] * 3</code>返回的只是对<code>[0, 0, 0]</code>的引用，所以<code>[[0] * 3] * 3]</code>得到的三个<code>[0, 0, 0]</code>的引用</p>
+<p>突然间回想起了大学时老师上课讲的C++数组深浅拷贝的问题，数组内存分配在堆上，引用是在栈中。深拷贝开辟新的堆空间，再进行值拷贝；浅拷贝只是对原内存的引用进行了拷贝。</p>
+<p>python底层实现依然是C/C++，大概率也是这种情况吧。<code>[0] * 3</code>是对象的重复，开辟了3个int的空间，返回的只是对<code>[0, 0, 0]</code>的引用；而<code>[[0] * 3] * 3]</code>是对引用的重复，返回了3个对<code>[0, 0, 0]</code>的引用，而且3个引用指向同一个内存地址。因此<code>DL[0][0]</code>、<code>DL[1][0]</code>、<code>DL[2][0]</code>指向同一个int内存，对<code>DL[0][0]</code>的赋值，会导致<code>DL[1][0]</code>和<code>DL[2][0]</code>的改变。</p>
 <h2 id="02-总结">02 总结</h2>
 <p>创建数组、初始化数组的正确姿势：</p>
 <div class="highlight"><div class="chroma">
