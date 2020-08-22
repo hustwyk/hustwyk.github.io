@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>seafile on @Xcare.blog()</title>
+    <link>https://hustwyk.github.io/tags/seafile/</link>
+    <description>Recent content in seafile on @Xcare.blog()</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Xcare</copyright>
+    <lastBuildDate>Sat, 22 Aug 2020 18:40:35 +0800</lastBuildDate>
+    
+	<atom:link href="https://hustwyk.github.io/tags/seafile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setup seafile on server with docker</title>
+      <link>https://hustwyk.github.io/post/setupseafileonserver/</link>
+      <pubDate>Sat, 22 Aug 2020 18:40:35 +0800</pubDate>
+      
+      <guid>https://hustwyk.github.io/post/setupseafileonserver/</guid>
+      <description>&lt;p&gt;记一次Aliyun服务器部署Seafile的经过。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

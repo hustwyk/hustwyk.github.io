@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Setup seafile on server with docker - @Xcare.blog()</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Xcare" /><meta name="description" content="Setup seafile on Aliyun server with docker image." /><meta name="keywords" content="seafile, docker" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.71.0 with theme even" />
+
+
+<link rel="canonical" href="https://hustwyk.github.io/post/setupseafileonserver/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<link href="https://hustwyk.github.io/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Setup seafile on server with docker" />
+<meta property="og:description" content="Setup seafile on Aliyun server with docker image." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hustwyk.github.io/post/setupseafileonserver/" />
+<meta property="article:published_time" content="2020-08-22T18:40:35+08:00" />
+<meta property="article:modified_time" content="2020-08-22T18:40:35+08:00" />
+<meta itemprop="name" content="Setup seafile on server with docker">
+<meta itemprop="description" content="Setup seafile on Aliyun server with docker image.">
+<meta itemprop="datePublished" content="2020-08-22T18:40:35&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-22T18:40:35&#43;08:00" />
+<meta itemprop="wordCount" content="1364">
+
+
+
+<meta itemprop="keywords" content="seafile,docker," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setup seafile on server with docker"/>
+<meta name="twitter:description" content="Setup seafile on Aliyun server with docker image."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">@Xcare.blog()</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">@Xcare.blog()</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Setup seafile on server with docker</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-08-22 </span>
+        <div class="post-category">
+            <a href="/categories/setup/"> setup </a>
+            </div>
+          <span class="more-meta"> 1364 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#00-起因">00 起因</a></li>
+    <li><a href="#01-搭建">01 搭建</a>
+      <ul>
+        <li><a href="#1-服务器">1、 服务器</a></li>
+        <li><a href="#2-seafile-with-docker">2、 Seafile with docker</a></li>
+        <li><a href="#3-seafdav">3、 SeafDAV</a></li>
+      </ul>
+    </li>
+    <li><a href="#02-使用">02 使用</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>记一次Aliyun服务器部署Seafile的经过。</p>
+<h2 id="00-起因">00 起因</h2>
+<p>本人为 <a href="https://happenapps.com/">Quiver</a> 使用者，近来希望使用 iOS 版的 Quiver，然而其 Library 只能从 Dropbox 或者其他 WebDAV 中选择。国内的网络环境直接排除第一个选项，而选择 WebDAV server 时，<a href="https://www.seafile.com/home/">Seafile</a> 吸引到了我。主要它可以对文件目录进行同步，而且有开源社区版，并提供 WebDAV 支持。</p>
+<h2 id="01-搭建">01 搭建</h2>
+<h3 id="1-服务器">1、 服务器</h3>
+<p>本人使用的是 Aliyun 的学生机，1核 2GB内存 40GB存储，勉强能用。。。。系统装了 Ubuntu16，稳如老狗。</p>
+<h3 id="2-seafile-with-docker">2、 Seafile with docker</h3>
+<p>大部分教程参考的<a href="https://cloud.seafile.com/published/seafile-manual-cn/docker/%E7%94%A8Docker%E9%83%A8%E7%BD%B2Seafile.md">官方文档</a>，按理说按图索骥就完事了，就不会有这篇文章了，然而官方文档有时也坑。</p>
+<p>其使用了 <code>docker-compose</code>，安装过程就略了。</p>
+<p>然后其默认用了 MySQL，Ubuntu 装 MySQL 自行 Google，<strong>请牢记root账户密码</strong>。</p>
+<p>下载 <code>docker-compose.yml</code> 到随便一个目录，然后开始改其配置。我先把我的配置贴出来，下面再细说。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="k">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;2.0&#39;</span><span class="w">
+</span><span class="w"></span><span class="k">services</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">db</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>mariadb<span class="p">:</span><span class="m">10.1</span><span class="w">
+</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span>seafile-mysql<span class="w">
+</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- MYSQL_ROOT_PASSWORD=YOUR_ROOT_PWD<span class="w">  </span><span class="c"># Requested, set the root&#39;s password of MySQL service.</span><span class="w">
+</span><span class="w">      </span>- MYSQL_LOG_CONSOLE=<span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- /opt/seafile-mysql/db<span class="p">:</span>/var/lib/mysql<span class="w">  </span><span class="c"># Requested, specifies the path to MySQL data persistent store.</span><span class="w">
+</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- seafile-net<span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="k">memcached</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>memcached<span class="p">:</span><span class="m">1.5.6</span><span class="w">
+</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span>seafile-memcached<span class="w">
+</span><span class="w">    </span><span class="k">entrypoint</span><span class="p">:</span><span class="w"> </span>memcached<span class="w"> </span>-m<span class="w"> </span><span class="m">256</span><span class="w">
+</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- seafile-net<span class="w">
+</span><span class="w">          
+</span><span class="w">  </span><span class="k">seafile</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>seafileltd/seafile-mc<span class="p">:</span>latest<span class="w">
+</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span>seafile<span class="w">
+</span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3380:80&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;443:443&#34;</span><span class="w">  </span><span class="c"># If https is enabled, cancel the comment.</span><span class="w">
+</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- /opt/seafile-data<span class="p">:</span>/shared<span class="w">   </span><span class="c"># Requested, specifies the path to Seafile data persistent store.</span><span class="w">
+</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- DB_HOST=db<span class="w">
+</span><span class="w">      </span>- DB_ROOT_PASSWD=YOUR_ROOT_PWD<span class="w">  </span><span class="c"># Requested, the value shuold be root&#39;s password of MySQL service.</span><span class="w">
+</span><span class="w">      </span>- TIME_ZONE=Asia/Shanghai<span class="w"> </span><span class="c"># Optional, default is UTC. Should be uncomment and set to your local time zone.</span><span class="w">
+</span><span class="w">      </span>- SEAFILE_ADMIN_EMAIL=me@example.com<span class="w"> </span><span class="c"># Specifies Seafile admin user, default is &#39;me@example.com&#39;.</span><span class="w">
+</span><span class="w">      </span>- SEAFILE_ADMIN_PASSWORD=asecret<span class="w">     </span><span class="c"># Specifies Seafile admin password, default is &#39;asecret&#39;.</span><span class="w">
+</span><span class="w">      </span>- SEAFILE_SERVER_LETSENCRYPT=<span class="kc">true</span><span class="w">   </span><span class="c"># Whether use letsencrypt to generate cert.</span><span class="w">
+</span><span class="w">      </span>- SEAFILE_SERVER_HOSTNAME=seafile.hollybee.wang<span class="w"> </span><span class="c"># Specifies your host name.</span><span class="w">
+</span><span class="w">    </span><span class="k">depends_on</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- db<span class="w">
+</span><span class="w">      </span>- memcached<span class="w">
+</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- seafile-net<span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">seafile-net</span><span class="p">:</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>首先，需要把 MySQL 的 root 密码在第 7、31 行进行替换。</p>
+<p>由于服务器 80 端口被占，所以把 container 的 80 端口映射为 3380</p>
+<p>取消第 32 行注释，从而设置时区。</p>
+<p>取消 26 行的注释，开启 443 端口，设置 <code>SEAFILE_SERVER_HOSTNAME</code> 为站点名，该站点名可以为子域名，需要设置其 DNS 解析，指向该服务器 ip。但是 <code>SEAFILE_SERVER_LETSENCRYPT</code> 不需要打开，因为 aliyun 服务器默认无法 FQ 去申请 letsencrypt 的证书，所以需要配置 FQ 环境或者使用自己的证书。证书我选择了 freessl 的免费证书，将证书放置在 <code>/opt/seafile-data/ssl</code> 目录下，证书命名为 <code>站点名.crt</code>，密钥命名为 <code>站点名.key</code>，它会自动识别并使用该证书。</p>
+<p>修改 <code>SEAFILE_ADMIN_EMAIL</code> 和 <code>SEAFILE_ADMIN_PASSWORD</code> 自定义管理员账号和密码。</p>
+<p>之后运行 <code>docker-compose up -d</code> 即可 pull 镜像并按照配置新建并运行 container，从而启动 Seafile 服务，浏览器访问 <code>https://seafile.hollybee.wang</code> 来打开 Seafile 主页。</p>
+<p><strong>注意：</strong></p>
+<p>此时可以正常上传文件，但是分享文件的链接却无法访问，需要进行以下设置：登录管理员账号，点击右上角进入 <code>系统管理</code>，点击 <code>设置</code>，将 <code>URL</code> 中的 <code>SERVICE_URL</code> 里的 <code>:8000</code> 去掉。因为使用了域名，不需要指定 8000 端口号，此时分享链接可以正常访问。</p>
+<h3 id="3-seafdav">3、 SeafDAV</h3>
+<p>虽然其 <a href="https://cloud.seafile.com/published/seafile-manual-cn/extension/webdav.md">官方文档</a> 给出了配置方法，但是我并没有成功登录。</p>
+<p>在网上看到了 <a href="https://www.pluvet.com/2020/04/22/seafile7-docker-%E7%89%88%E6%9C%AC-%E5%90%AF%E7%94%A8-webdav-%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%88%E4%B8%8D%E9%9C%80%E8%A6%81%E9%A2%9D%E5%A4%96%E7%9A%84%E7%AB%AF%E5%8F%A3%EF%BC%89%E4%BB%A5-purewriter/">这篇博客</a>，找到了解决方法。</p>
+<p>编辑 <code>seafdav.conf</code> 文件，即 <code>vim /opt/seafile-data/seafile/conf/seafdav.conf</code>.按照如下内容配置：注意，这里不要擅自做任何更改，因为它自带的 Nginx 的配置就是照着这个写的，端口不要改，share_name 也不要改，否则就会连不上。必须启用 fastcgi。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[WEBDAV]
+enabled = true
+port = 8080
+fastcgi = true
+share_name = /seafdav
+</code></pre></td></tr></table>
+</div>
+</div><p>然后通过你映射的端口来访问，比如 3380:80 表示把 seafile docker 的 80 端口映射到 3380 公网端口。那么你就可以用 <code>http://公网ip:3380/seafdav</code> 进行访问，也可以使用 <code>https://seafile.hollybee.wang/seafdav</code>访问。</p>
+<h2 id="02-使用">02 使用</h2>
+<p>iOS 端 Quiver 上成功配置 WebDAV，可以同步笔记，但是文件夹的嵌套关系已经不存在了，所有的文件夹都平铺表示，只包含文件夹的文件夹里面不会有文件，之后包含文件的文件夹才有东西。。。不说绕口令了，总之 iOS 版的 Quiver 确实挺垃圾的，不过找到包含文件的文件夹进行下载，文章还是可以正常阅读的，没有辜负折腾一大圈的努力。</p>
+    </div>
+
+    
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">Reward</label>
+  <div class="qr-code">
+    
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/wechat.png">
+        <span>wechat</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="/img/reward/alipay.png">
+        <span>alipay</span>
+      </label>
+  </div>
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/seafile/">seafile</a>
+          <a href="/tags/docker/">docker</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/ajourney2xiamenhangzhou/">
+            <span class="next-text nav-default">A Journey to Xiamen and Hangzhou</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'hollybee-wang';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2020-08-22 18:40:35 \x2b0800 CST',
+        title: 'Setup seafile on server with docker',
+        clientID: '6ec2d4e18a02ee89da4e',
+        clientSecret: 'f2443f8af6b97e6700dd65a6605fbdc444903943',
+        repo: 'BlogComments',
+        owner: 'hustwyk',
+        admin: ['hustwyk'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:hustwyk@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/YorkLynn2" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/InconWong" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://github.com/hustwyk" class="iconfont icon-github" title="github"></a>
+      <a href="https://www.zhihu.com/people/anna-daisy-5/activities" class="iconfont icon-zhihu" title="zhihu"></a>
+  <a href="https://hustwyk.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  <div class="busuanzi-footer">
+    <span id="busuanzi_container_site_pv"> site pv: <span id="busuanzi_value_site_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+      <span class="division">|</span>
+    <span id="busuanzi_container_site_uv"> site uv: <span id="busuanzi_value_site_uv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> </span>
+  </div>
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Xcare</span>
+  </span>
+  <a href="http://www.beian.miit.gov.cn/" target="_blank" style="color:#ccc;text-decoration:none;font-size:14px;">京ICP备18057338号</a>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="https://hustwyk.github.io/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-129663555-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

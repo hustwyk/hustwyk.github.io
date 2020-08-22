@@ -9,14 +9,56 @@
   </url>
   
   <url>
-    <loc>https://hustwyk.github.io/post/ajourney2xiamenhangzhou/</loc>
-    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
+    <loc>https://hustwyk.github.io/categories/</loc>
+    <lastmod>2020-08-22T18:40:35+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://hustwyk.github.io/categories/</loc>
+    <loc>https://hustwyk.github.io/tags/docker/</loc>
+    <lastmod>2020-08-22T18:40:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/post/</loc>
+    <lastmod>2020-08-22T18:40:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/tags/seafile/</loc>
+    <lastmod>2020-08-22T18:40:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/categories/setup/</loc>
+    <lastmod>2020-08-22T18:40:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/post/setupseafileonserver/</loc>
+    <lastmod>2020-08-22T18:40:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/tags/</loc>
+    <lastmod>2020-08-22T18:40:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hustwyk.github.io/post/ajourney2xiamenhangzhou/</loc>
     <lastmod>2020-06-26T12:13:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -31,20 +73,6 @@
   
   <url>
     <loc>https://hustwyk.github.io/categories/journey/</loc>
-    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://hustwyk.github.io/post/</loc>
-    <lastmod>2020-06-26T12:13:49+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://hustwyk.github.io/tags/</loc>
     <lastmod>2020-06-26T12:13:49+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

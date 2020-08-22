@@ -26,6 +26,15 @@
     </item>
     
     <item>
+      <title>Setup seafile on server with docker</title>
+      <link>https://hustwyk.github.io/post/setupseafileonserver/</link>
+      <pubDate>Sat, 22 Aug 2020 18:40:35 +0800</pubDate>
+      
+      <guid>https://hustwyk.github.io/post/setupseafileonserver/</guid>
+      <description>&lt;p&gt;记一次Aliyun服务器部署Seafile的经过。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>A Journey to Xiamen and Hangzhou</title>
       <link>https://hustwyk.github.io/post/ajourney2xiamenhangzhou/</link>
       <pubDate>Fri, 26 Jun 2020 12:13:49 +0800</pubDate>
