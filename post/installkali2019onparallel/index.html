@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.71.0 with theme even" />
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
 
 
 <link rel="canonical" href="https://hustwyk.github.io/post/installkali2019onparallel/" />
@@ -47,13 +47,14 @@
 <meta property="article:modified_time" content="2019-03-16T11:49:06+08:00" />
 <meta itemprop="name" content="Install Kali 2019 on Parallel">
 <meta itemprop="description" content="This is an elaborate procession of installing Kali linux 2019 on Parallel Desktop">
-<meta itemprop="datePublished" content="2019-03-16T11:49:06&#43;08:00" />
-<meta itemprop="dateModified" content="2019-03-16T11:49:06&#43;08:00" />
-<meta itemprop="wordCount" content="1347">
+<meta itemprop="datePublished" content="2019-03-16T11:49:06+08:00" />
+<meta itemprop="dateModified" content="2019-03-16T11:49:06+08:00" />
+<meta itemprop="wordCount" content="1336">
 
 
 
-<meta itemprop="keywords" content="macOS,parallel," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="macOS,parallel," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Kali 2019 on Parallel"/>
 <meta name="twitter:description" content="This is an elaborate procession of installing Kali linux 2019 on Parallel Desktop"/>
 
@@ -130,7 +131,7 @@
             <a href="/categories/macos/"> macOS </a>
             <a href="/categories/parallel/"> parallel </a>
             </div>
-          <span class="more-meta"> 1347 words </span>
+          <span class="more-meta"> 1336 words </span>
           <span class="more-meta"> 3 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -161,27 +162,27 @@
 <p>首先，下载并安装<a href="https://xclient.info/s/parallels-desktop.html?t=5d715616c57d46b4ed06f92f4ca4b8cc02093f82#versions">Parallel Desktop</a>虚拟机，这个我就不多说了，我目前的版本为<code>14.1.2</code>。</p>
 <p>下载Kali Linux，下载地址https://www.kali.org/downloads/ ，选择自己需要的版本，我这里选择的是<code>Kali Linux 64 Bit</code>，版本为<code>2019.1a</code>。</p>
 <h2 id="01-创建虚拟机镜像"><em>01 创建虚拟机镜像</em></h2>
-<p>首先，parallel新建虚拟机，选择&quot;install &hellip; from image file&rdquo;，之后会弹出Kali的启动界面，选择&quot;install&rdquo;，然后是&quot;select a language&rdquo;，选择English，go on。</p>
+<p>首先，parallel新建虚拟机，选择&quot;install &hellip; from image file&quot;，之后会弹出Kali的启动界面，选择&quot;install&quot;，然后是&quot;select a language&quot;，选择English，go on。</p>
 <p><img src="/images/installKaliOnParallel/1.png" alt="Local Picture" title="select a language"></p>
-<p>之后是&quot;select your location&rdquo;，选择Hong Kong。</p>
+<p>之后是&quot;select your location&quot;，选择Hong Kong。</p>
 <p><img src="/images/installKaliOnParallel/2.png" alt="Local Picture" title="select your location"></p>
-<p>之后是&quot;configure the keyboard&rdquo;，选American English就ok。</p>
+<p>之后是&quot;configure the keyboard&quot;，选American English就ok。</p>
 <p><img src="/images/installKaliOnParallel/3.png" alt="Local Picture" title="configure the keyboard"></p>
 <p>之后等待系统完成自动配置。Loading&hellip;</p>
-<p>之后是&quot;configure the network&rdquo;，默认就行。</p>
+<p>之后是&quot;configure the network&quot;，默认就行。</p>
 <p><img src="/images/installKaliOnParallel/4.png" alt="Local Picture" title="configure the network"></p>
-<p>之后是&quot;set up users and passwords&rdquo;，设置root账户的密码，自行设置，别忘记之后还有re-enter to verify。</p>
+<p>之后是&quot;set up users and passwords&quot;，设置root账户的密码，自行设置，别忘记之后还有re-enter to verify。</p>
 <p><img src="/images/installKaliOnParallel/5.png" alt="Local Picture" title="set up users and passwords"></p>
 <p>之后又是一些系统配置。Loading&hellip;</p>
-<p>之后是&quot;partition disks&rdquo;，这里选择&quot;Guided-use entire disk&rdquo;，如果有需求也可以选择其他的或者manual。</p>
+<p>之后是&quot;partition disks&quot;，这里选择&quot;Guided-use entire disk&quot;，如果有需求也可以选择其他的或者manual。</p>
 <p><img src="/images/installKaliOnParallel/6.png" alt="Local Picture" title="partition disks"></p>
 <p>本人没有特别需求，在partition disks上面直接一路默认。</p>
 <p>之后等待installing the system, Loading&hellip;</p>
-<p>之后是&quot;configure the package manager&rdquo;，选择Yes。</p>
+<p>之后是&quot;configure the package manager&quot;，选择Yes。</p>
 <p><img src="/images/installKaliOnParallel/7.png" alt="Local Picture" title="configure the package manager"></p>
 <p>Proxy配置这个我选择了跳过。</p>
 <p>然后是下载并配置。Loading&hellip;</p>
-<p>之后是&quot;install the GRUB boot loader on a hard disk&rdquo;，选择Yes。</p>
+<p>之后是&quot;install the GRUB boot loader on a hard disk&quot;，选择Yes。</p>
 <p><img src="/images/installKaliOnParallel/8.png" alt="Local Picture" title="install the GRUB boot loader on a hard disk"></p>
 <p>Device for boot loader installation，选择默认挂载的设备/dev/sda。</p>
 <p><img src="/images/installKaliOnParallel/9.png" alt="Local Picture" title="install the GRUB boot loader on a hard disk"></p>
@@ -340,7 +341,7 @@ deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free 
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2019-03-16 11:49:06 \x2b0800 CST',
+        id: '2019-03-16 11:49:06 \u002b0800 CST',
         title: 'Install Kali 2019 on Parallel',
         clientID: '6ec2d4e18a02ee89da4e',
         clientSecret: 'f2443f8af6b97e6700dd65a6605fbdc444903943',

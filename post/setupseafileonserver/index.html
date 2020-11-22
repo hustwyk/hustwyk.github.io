@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.71.0 with theme even" />
+<meta name="generator" content="Hugo 0.75.1 with theme even" />
 
 
 <link rel="canonical" href="https://hustwyk.github.io/post/setupseafileonserver/" />
@@ -47,13 +47,14 @@
 <meta property="article:modified_time" content="2020-08-22T18:40:35+08:00" />
 <meta itemprop="name" content="Setup seafile on server with docker">
 <meta itemprop="description" content="Setup seafile on Aliyun server with docker image.">
-<meta itemprop="datePublished" content="2020-08-22T18:40:35&#43;08:00" />
-<meta itemprop="dateModified" content="2020-08-22T18:40:35&#43;08:00" />
-<meta itemprop="wordCount" content="1364">
+<meta itemprop="datePublished" content="2020-08-22T18:40:35+08:00" />
+<meta itemprop="dateModified" content="2020-08-22T18:40:35+08:00" />
+<meta itemprop="wordCount" content="1375">
 
 
 
-<meta itemprop="keywords" content="seafile,docker," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="seafile,docker," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Setup seafile on server with docker"/>
 <meta name="twitter:description" content="Setup seafile on Aliyun server with docker image."/>
 
@@ -129,7 +130,7 @@
         <div class="post-category">
             <a href="/categories/setup/"> setup </a>
             </div>
-          <span class="more-meta"> 1364 words </span>
+          <span class="more-meta"> 1375 words </span>
           <span class="more-meta"> 3 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -213,50 +214,50 @@
 </span><span class="lnt">44
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="k">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;2.0&#39;</span><span class="w">
-</span><span class="w"></span><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">db</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>mariadb<span class="p">:</span><span class="m">10.1</span><span class="w">
-</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span>seafile-mysql<span class="w">
-</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- MYSQL_ROOT_PASSWORD=YOUR_ROOT_PWD<span class="w">  </span><span class="c"># Requested, set the root&#39;s password of MySQL service.</span><span class="w">
-</span><span class="w">      </span>- MYSQL_LOG_CONSOLE=<span class="kc">true</span><span class="w">
-</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- /opt/seafile-mysql/db<span class="p">:</span>/var/lib/mysql<span class="w">  </span><span class="c"># Requested, specifies the path to MySQL data persistent store.</span><span class="w">
-</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- seafile-net<span class="w">
+<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;2.0&#39;</span><span class="w">
+</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mariadb:10.1</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">seafile-mysql</span><span class="w">
+</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">MYSQL_ROOT_PASSWORD=YOUR_ROOT_PWD  # Requested, set the root&#39;s password of MySQL service.</span><span class="w">
+</span><span class="w">      </span>- <span class="l">MYSQL_LOG_CONSOLE=true</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/opt/seafile-mysql/db:/var/lib/mysql  # Requested, specifies the path to MySQL data persistent store.</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">seafile-net</span><span class="w">
 </span><span class="w">
-</span><span class="w">  </span><span class="k">memcached</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>memcached<span class="p">:</span><span class="m">1.5.6</span><span class="w">
-</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span>seafile-memcached<span class="w">
-</span><span class="w">    </span><span class="k">entrypoint</span><span class="p">:</span><span class="w"> </span>memcached<span class="w"> </span>-m<span class="w"> </span><span class="m">256</span><span class="w">
-</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- seafile-net<span class="w">
+</span><span class="w">  </span><span class="nt">memcached</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">memcached:1.5.6</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">seafile-memcached</span><span class="w">
+</span><span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="l">memcached -m 256</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">seafile-net</span><span class="w">
 </span><span class="w">          
-</span><span class="w">  </span><span class="k">seafile</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>seafileltd/seafile-mc<span class="p">:</span>latest<span class="w">
-</span><span class="w">    </span><span class="k">container_name</span><span class="p">:</span><span class="w"> </span>seafile<span class="w">
-</span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">seafile</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">seafileltd/seafile-mc:latest</span><span class="w">
+</span><span class="w">    </span><span class="nt">container_name</span><span class="p">:</span><span class="w"> </span><span class="l">seafile</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>- <span class="s2">&#34;3380:80&#34;</span><span class="w">
 </span><span class="w">      </span>- <span class="s2">&#34;443:443&#34;</span><span class="w">  </span><span class="c"># If https is enabled, cancel the comment.</span><span class="w">
-</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- /opt/seafile-data<span class="p">:</span>/shared<span class="w">   </span><span class="c"># Requested, specifies the path to Seafile data persistent store.</span><span class="w">
-</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- DB_HOST=db<span class="w">
-</span><span class="w">      </span>- DB_ROOT_PASSWD=YOUR_ROOT_PWD<span class="w">  </span><span class="c"># Requested, the value shuold be root&#39;s password of MySQL service.</span><span class="w">
-</span><span class="w">      </span>- TIME_ZONE=Asia/Shanghai<span class="w"> </span><span class="c"># Optional, default is UTC. Should be uncomment and set to your local time zone.</span><span class="w">
-</span><span class="w">      </span>- SEAFILE_ADMIN_EMAIL=me@example.com<span class="w"> </span><span class="c"># Specifies Seafile admin user, default is &#39;me@example.com&#39;.</span><span class="w">
-</span><span class="w">      </span>- SEAFILE_ADMIN_PASSWORD=asecret<span class="w">     </span><span class="c"># Specifies Seafile admin password, default is &#39;asecret&#39;.</span><span class="w">
-</span><span class="w">      </span>- SEAFILE_SERVER_LETSENCRYPT=<span class="kc">true</span><span class="w">   </span><span class="c"># Whether use letsencrypt to generate cert.</span><span class="w">
-</span><span class="w">      </span>- SEAFILE_SERVER_HOSTNAME=seafile.hollybee.wang<span class="w"> </span><span class="c"># Specifies your host name.</span><span class="w">
-</span><span class="w">    </span><span class="k">depends_on</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- db<span class="w">
-</span><span class="w">      </span>- memcached<span class="w">
-</span><span class="w">    </span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- seafile-net<span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">/opt/seafile-data:/shared   # Requested, specifies the path to Seafile data persistent store.</span><span class="w">
+</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">DB_HOST=db</span><span class="w">
+</span><span class="w">      </span>- <span class="l">DB_ROOT_PASSWD=YOUR_ROOT_PWD  # Requested, the value shuold be root&#39;s password of MySQL service.</span><span class="w">
+</span><span class="w">      </span>- <span class="l">TIME_ZONE=Asia/Shanghai # Optional, default is UTC. Should be uncomment and set to your local time zone.</span><span class="w">
+</span><span class="w">      </span>- <span class="l">SEAFILE_ADMIN_EMAIL=me@example.com # Specifies Seafile admin user, default is &#39;me@example.com&#39;.</span><span class="w">
+</span><span class="w">      </span>- <span class="l">SEAFILE_ADMIN_PASSWORD=asecret     # Specifies Seafile admin password, default is &#39;asecret&#39;.</span><span class="w">
+</span><span class="w">      </span>- <span class="l">SEAFILE_SERVER_LETSENCRYPT=true   # Whether use letsencrypt to generate cert.</span><span class="w">
+</span><span class="w">      </span>- <span class="l">SEAFILE_SERVER_HOSTNAME=seafile.hollybee.wang # Specifies your host name.</span><span class="w">
+</span><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">db</span><span class="w">
+</span><span class="w">      </span>- <span class="l">memcached</span><span class="w">
+</span><span class="w">    </span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">seafile-net</span><span class="w">
 </span><span class="w">
-</span><span class="w"></span><span class="k">networks</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">seafile-net</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="nt">networks</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">seafile-net</span><span class="p">:</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div><p>首先，需要把 MySQL 的 root 密码在第 7、31 行进行替换。</p>
@@ -341,7 +342,7 @@ share_name = /seafdav
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2020-08-22 18:40:35 \x2b0800 CST',
+        id: '2020-08-22 18:40:35 \u002b0800 CST',
         title: 'Setup seafile on server with docker',
         clientID: '6ec2d4e18a02ee89da4e',
         clientSecret: 'f2443f8af6b97e6700dd65a6605fbdc444903943',

@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Xcare</copyright>
-    <lastBuildDate>Mon, 04 Mar 2019 15:43:44 +0800</lastBuildDate>
-    
-	<atom:link href="https://hustwyk.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 04 Mar 2019 15:43:44 +0800</lastBuildDate><atom:link href="https://hustwyk.github.io/tags/security/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android逆向大黄书网页收集版（根据大黄书自制）</title>
       <link>https://hustwyk.github.io/post/androidappsecproandreverseanalysing/</link>

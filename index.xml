@@ -7,11 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Xcare</copyright>
-    <lastBuildDate>Tue, 23 Oct 2018 20:38:52 +0800</lastBuildDate>
-    
-	<atom:link href="https://hustwyk.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 22 Aug 2020 18:40:35 +0800</lastBuildDate><atom:link href="https://hustwyk.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://hustwyk.github.io/about/</link>
@@ -20,7 +16,8 @@
       <guid>https://hustwyk.github.io/about/</guid>
       <description>About Me  Name - Hollybee
   Email - hustwyk@gmail.com
-  Location - SKLOIS | Beijing CN
+  Field - Mobile security
+  Location - ICSL | Guangdong CN
   Theme - Even
  </description>
     </item>
