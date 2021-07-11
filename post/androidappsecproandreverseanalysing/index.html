@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.75.1 with theme even" />
+<meta name="generator" content="Hugo 0.85.0 with theme even" />
 
 
 <link rel="canonical" href="https://hustwyk.github.io/post/androidappsecproandreverseanalysing/" />
@@ -35,26 +35,22 @@
 
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<link href="https://hustwyk.github.io/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
+<link href="https://hustwyk.github.io/sass/main.min.24752eee7d244519907709610f39db5d85a57e527ff033fcae4457858307d262.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Android逆向大黄书网页收集版（根据大黄书自制）" />
 <meta property="og:description" content="a collection of web pages included in the android big yellow book" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hustwyk.github.io/post/androidappsecproandreverseanalysing/" />
+<meta property="og:url" content="https://hustwyk.github.io/post/androidappsecproandreverseanalysing/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2019-03-04T15:43:44+08:00" />
 <meta property="article:modified_time" content="2019-04-19T15:43:44+08:00" />
+
 <meta itemprop="name" content="Android逆向大黄书网页收集版（根据大黄书自制）">
-<meta itemprop="description" content="a collection of web pages included in the android big yellow book">
-<meta itemprop="datePublished" content="2019-03-04T15:43:44+08:00" />
+<meta itemprop="description" content="a collection of web pages included in the android big yellow book"><meta itemprop="datePublished" content="2019-03-04T15:43:44+08:00" />
 <meta itemprop="dateModified" content="2019-04-19T15:43:44+08:00" />
 <meta itemprop="wordCount" content="1045">
-
-
-
-<meta itemprop="keywords" content="android,reverse,security," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="android,reverse,security," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Android逆向大黄书网页收集版（根据大黄书自制）"/>
 <meta name="twitter:description" content="a collection of web pages included in the android big yellow book"/>
 
@@ -306,15 +302,15 @@ Section header string table index: 25
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="n">uint16_t</span> <span class="n">Elf64_Half</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">int16_t</span> <span class="n">Elf64_SHalf</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint32_t</span> <span class="n">Elf64_Word</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">int32_t</span> <span class="n">Elf64_Sword</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint64_t</span> <span class="n">Elf64_Xword</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">int64_t</span> <span class="n">Elf64_Sxword</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint64_t</span> <span class="n">Elf64_Off</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint64_t</span> <span class="n">Elf64_Addr</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint16_t</span> <span class="n">Elf64_Section</span><span class="p">;</span>
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">Elf64_Half</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int16_t</span> <span class="n">Elf64_SHalf</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint32_t</span> <span class="n">Elf64_Word</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int32_t</span> <span class="n">Elf64_Sword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint64_t</span> <span class="n">Elf64_Xword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int64_t</span> <span class="n">Elf64_Sxword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint64_t</span> <span class="n">Elf64_Off</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint64_t</span> <span class="n">Elf64_Addr</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">Elf64_Section</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>对比给出32位ELF文件的<code>section header</code>的结构</p>
@@ -363,15 +359,15 @@ Section header string table index: 25
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="n">uint16_t</span> <span class="n">Elf32_Half</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">int16_t</span> <span class="n">Elf32_SHalf</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint32_t</span> <span class="n">Elf32_Word</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">int32_t</span> <span class="n">Elf32_Sword</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint64_t</span> <span class="n">Elf32_Xword</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">int64_t</span> <span class="n">Elf32_Sxword</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint32_t</span> <span class="n">Elf32_Off</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint32_t</span> <span class="n">Elf32_Addr</span><span class="p">;</span>
-<span class="k">typedef</span> <span class="n">uint16_t</span> <span class="n">Elf32_Section</span><span class="p">;</span>
+<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">Elf32_Half</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int16_t</span> <span class="n">Elf32_SHalf</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint32_t</span> <span class="n">Elf32_Word</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int32_t</span> <span class="n">Elf32_Sword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint64_t</span> <span class="n">Elf32_Xword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">int64_t</span> <span class="n">Elf32_Sxword</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint32_t</span> <span class="n">Elf32_Off</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint32_t</span> <span class="n">Elf32_Addr</span><span class="p">;</span>
+<span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">Elf32_Section</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>由此可以简单计算出64位ELF文件<code>section header</code>共有</p>
@@ -388,7 +384,7 @@ L (link order), O (extra OS processing required), G (group), T (TLS),
 C (compressed), x (unknown), o (OS specific), E (exclude),
 y (purecode), p (processor specific)
 ```
-  
+
 在`section header`中对应每个`Flg`属性的二进制如下：
 </code></pre>
 </li>
@@ -512,7 +508,7 @@ y (purecode), p (processor specific)
   <span class="copyright-year">
     &copy; 
     2018 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
