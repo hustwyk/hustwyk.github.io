@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0 with theme even" />
+<meta name="generator" content="Hugo 0.89.1 with theme even" />
 
 
 <link rel="canonical" href="https://hustwyk.github.io/post/installkali2019onparallel/" />
@@ -207,13 +207,13 @@
 <p>拷贝出来并修改权限</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">mkdir ~/tool
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">mkdir ~/tool
 cp -rf /media/cdrom0 tool
 <span class="nb">cd</span> ~/tool
 chmod +x * -R
@@ -222,10 +222,10 @@ chmod +x * -R
 </div><p>运行<code>install</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">./install
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">./install
 </code></pre></td></tr></table>
 </div>
 </div><p>之后一路默认，片刻之后Parallels Tools就安装好了。</p>
@@ -235,10 +235,10 @@ chmod +x * -R
 <h3 id="编辑sourceslist将kali更新源加入其中">编辑sources.list,将kali更新源加入其中</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">vim /etc/apt/sources.list
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">vim /etc/apt/sources.list
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="国内更新源">国内更新源</h3>
@@ -247,11 +247,11 @@ chmod +x * -R
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib 
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">deb http://mirrors.aliyun.com/kali kali-rolling main non-free contrib 
 deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib 
 </code></pre></td></tr></table>
 </div>
@@ -260,11 +260,11 @@ deb-src http://mirrors.aliyun.com/kali kali-rolling main non-free contrib 
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free 
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">deb http://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free 
 deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-free 
 </code></pre></td></tr></table>
 </div>
@@ -273,11 +273,11 @@ deb-src https://mirrors.tuna.tsinghua.edu.cn/kali kali-rolling main contrib non-
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free 
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">deb http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free 
 deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free 
 </code></pre></td></tr></table>
 </div>
@@ -285,10 +285,10 @@ deb-src http://mirrors.zju.edu.cn/kali kali-rolling main contrib non-free 
 <h3 id="更新">更新</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">apt-get clean <span class="o">&amp;&amp;</span> apt-get update <span class="o">&amp;&amp;</span> apt-get upgrade -y <span class="o">&amp;&amp;</span> apt-get dist-upgrade -y 
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">apt-get clean <span class="o">&amp;&amp;</span> apt-get update <span class="o">&amp;&amp;</span> apt-get upgrade -y <span class="o">&amp;&amp;</span> apt-get dist-upgrade -y 
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="命令讲解">命令讲解： </h4>

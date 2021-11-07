@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0 with theme even" />
+<meta name="generator" content="Hugo 0.89.1 with theme even" />
 
 
 <link rel="canonical" href="https://hustwyk.github.io/post/shallowdeepcopyinpy/" />
@@ -169,37 +169,37 @@
 <p>众所周知，python在初始化list的时候有很多种写法，其中有一种是</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)]</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)]</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>这句代码是创建list类型、长度为length的数组<code>L</code>并将其初始化为全0</p>
 <p>这是一种非常棒的方法，但是有时候为了省事，会有另外一种写法</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">length</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">length</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>这种方法可以说是非常的python了，好用而且关键是敲的字母少啊</p>
 <p>但是刷题往往会遇到二维数组，凭借着我多年python经验，不假思索写出了</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">DL</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">length1</span><span class="p">]</span> <span class="o">*</span> <span class="n">length2</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">DL</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">length1</span><span class="p">]</span> <span class="o">*</span> <span class="n">length2</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>喏，这不就创建了 length2 * length1 的二维数组了么</p>
 <p>但是当给第一个数字，也就是<code>DL[0][0]</code>赋值的时候，会发现神奇的现象</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -210,7 +210,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 初始化DL</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 初始化DL</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">DL</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
 
 <span class="c1"># 给DL[0][0]赋值1</span>
@@ -228,7 +228,7 @@
 <p>创建数组、初始化数组的正确姿势：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -238,7 +238,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 创建长度length数组并初始化0</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="c1"># 创建长度length数组并初始化0</span>
 <span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">)]</span>
 
 <span class="c1"># 创建长度length数组并从0递增</span>

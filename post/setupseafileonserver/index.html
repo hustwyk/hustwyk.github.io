@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0 with theme even" />
+<meta name="generator" content="Hugo 0.89.1 with theme even" />
 
 
 <link rel="canonical" href="https://hustwyk.github.io/post/setupseafileonserver/" />
@@ -178,7 +178,7 @@
 <p>下载 <code>docker-compose.yml</code> 到随便一个目录，然后开始改其配置。我先把我的配置贴出来，下面再细说。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -224,7 +224,7 @@
 </span><span class="lnt">44
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;2.0&#39;</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;2.0&#39;</span><span class="w">
 </span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
 </span><span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w">
 </span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mariadb:10.1</span><span class="w">
@@ -284,14 +284,14 @@
 <p>编辑 <code>seafdav.conf</code> 文件，即 <code>vim /opt/seafile-data/seafile/conf/seafdav.conf</code>.按照如下内容配置：注意，这里不要擅自做任何更改，因为它自带的 Nginx 的配置就是照着这个写的，端口不要改，share_name 也不要改，否则就会连不上。必须启用 fastcgi。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[WEBDAV]
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[WEBDAV]
 enabled = true
 port = 8080
 fastcgi = true
@@ -324,7 +324,11 @@ share_name = /seafdav
           <a href="/tags/docker/">docker</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/post/setupctfd/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Setup CTFd with CTFd-whale</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/post/ajourney2xiamenhangzhou/">
             <span class="next-text nav-default">A Journey to Xiamen and Hangzhou</span>
             <span class="next-text nav-mobile">Next</span>

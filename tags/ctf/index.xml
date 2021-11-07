@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ctf on @Xcare.blog()</title>
+    <link>https://hustwyk.github.io/tags/ctf/</link>
+    <description>Recent content in ctf on @Xcare.blog()</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Xcare</copyright>
+    <lastBuildDate>Sun, 07 Nov 2021 13:37:37 +0800</lastBuildDate><atom:link href="https://hustwyk.github.io/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup CTFd with CTFd-whale</title>
+      <link>https://hustwyk.github.io/post/setupctfd/</link>
+      <pubDate>Sun, 07 Nov 2021 13:37:37 +0800</pubDate>
+      
+      <guid>https://hustwyk.github.io/post/setupctfd/</guid>
+      <description>&lt;p&gt;记一次搭建CTF pwn靶场的经过。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

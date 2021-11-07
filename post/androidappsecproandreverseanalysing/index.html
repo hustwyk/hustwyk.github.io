@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.85.0 with theme even" />
+<meta name="generator" content="Hugo 0.89.1 with theme even" />
 
 
 <link rel="canonical" href="https://hustwyk.github.io/post/androidappsecproandreverseanalysing/" />
@@ -178,7 +178,7 @@
 <p>i) <code>readelf -h</code> 查看64位so文件的<strong>header</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -200,7 +200,7 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ELF Header:
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ELF Header:
 Magic:   7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
 Class:                             ELF64
 Data:                              2&#39;s complement, little endian
@@ -225,7 +225,7 @@ Section header string table index: 23
 </div><p>对比查看32位so文件的<strong>header</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -247,7 +247,7 @@ Section header string table index: 23
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">ELF Header:
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ELF Header:
 Magic:   7f 45 4c 46 01 01 01 00 00 00 00 00 00 00 00 00
 Class:                             ELF32
 Data:                              2&#39;s complement, little endian
@@ -274,7 +274,7 @@ Section header string table index: 25
 <p>（来自 <a href="http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf64.h">http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf64.h</a> ）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -288,7 +288,7 @@ Section header string table index: 25
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">elf64_shdr</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">elf64_shdr</span> <span class="p">{</span>
     <span class="n">Elf64_Word</span> <span class="n">sh_name</span><span class="p">;</span>
     <span class="n">Elf64_Word</span> <span class="n">sh_type</span><span class="p">;</span>
     <span class="n">Elf64_Xword</span> <span class="n">sh_flags</span><span class="p">;</span>
@@ -305,7 +305,7 @@ Section header string table index: 25
 </div><p>其中字段类型的<code>typedef</code>如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -316,7 +316,7 @@ Section header string table index: 25
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">Elf64_Half</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">Elf64_Half</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">int16_t</span> <span class="n">Elf64_SHalf</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">uint32_t</span> <span class="n">Elf64_Word</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">int32_t</span> <span class="n">Elf64_Sword</span><span class="p">;</span>
@@ -331,7 +331,7 @@ Section header string table index: 25
 <p>（来自 <a href="http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf32.h">http://androidxref.com/8.1.0_r33/xref/external/syslinux/com32/include/sys/elf32.h</a> ）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -345,7 +345,7 @@ Section header string table index: 25
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">elf32_shdr</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="k">struct</span> <span class="n">elf32_shdr</span> <span class="p">{</span>
     <span class="n">Elf32_Word</span> <span class="n">sh_name</span><span class="p">;</span>
     <span class="n">Elf32_Word</span> <span class="n">sh_type</span><span class="p">;</span>
     <span class="n">Elf32_Word</span> <span class="n">sh_flags</span><span class="p">;</span>
@@ -362,7 +362,7 @@ Section header string table index: 25
 </div><p>其中字段类型的<code>typedef</code>如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -373,7 +373,7 @@ Section header string table index: 25
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">Elf32_Half</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-C" data-lang="C"><span class="k">typedef</span> <span class="kt">uint16_t</span> <span class="n">Elf32_Half</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">int16_t</span> <span class="n">Elf32_SHalf</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">uint32_t</span> <span class="n">Elf32_Word</span><span class="p">;</span>
 <span class="k">typedef</span> <span class="kt">int32_t</span> <span class="n">Elf32_Sword</span><span class="p">;</span>

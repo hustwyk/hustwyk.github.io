@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol - @Xcare.blog()</title>
+  <title>Setup CTFd with CTFd-whale - @Xcare.blog()</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Xcare" /><meta name="description" content="An interesting problem of extension problem of Finder on macOS and an interesting solution corresponding" /><meta name="keywords" content="macOS, Finder, Extension, Onedrive" />
+<meta name="author" content="Xcare" /><meta name="description" content="Setup CTFd with CTFd-whale" /><meta name="keywords" content="ctf" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.89.1 with theme even" />
 
 
-<link rel="canonical" href="https://hustwyk.github.io/post/syncsoftwarefinder/" />
+<link rel="canonical" href="https://hustwyk.github.io/post/setupctfd/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,20 +39,20 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol" />
-<meta property="og:description" content="An interesting problem of extension problem of Finder on macOS and an interesting solution corresponding" />
+<meta property="og:title" content="Setup CTFd with CTFd-whale" />
+<meta property="og:description" content="Setup CTFd with CTFd-whale" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hustwyk.github.io/post/syncsoftwarefinder/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-01-16T09:45:32+08:00" />
-<meta property="article:modified_time" content="2020-01-16T09:45:32+08:00" />
+<meta property="og:url" content="https://hustwyk.github.io/post/setupctfd/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-07T13:37:37+08:00" />
+<meta property="article:modified_time" content="2021-11-07T13:37:37+08:00" />
 
-<meta itemprop="name" content="Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol">
-<meta itemprop="description" content="An interesting problem of extension problem of Finder on macOS and an interesting solution corresponding"><meta itemprop="datePublished" content="2020-01-16T09:45:32+08:00" />
-<meta itemprop="dateModified" content="2020-01-16T09:45:32+08:00" />
-<meta itemprop="wordCount" content="1171">
-<meta itemprop="keywords" content="macOS,Extension," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol"/>
-<meta name="twitter:description" content="An interesting problem of extension problem of Finder on macOS and an interesting solution corresponding"/>
+<meta itemprop="name" content="Setup CTFd with CTFd-whale">
+<meta itemprop="description" content="Setup CTFd with CTFd-whale"><meta itemprop="datePublished" content="2021-11-07T13:37:37+08:00" />
+<meta itemprop="dateModified" content="2021-11-07T13:37:37+08:00" />
+<meta itemprop="wordCount" content="1490">
+<meta itemprop="keywords" content="ctf," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Setup CTFd with CTFd-whale"/>
+<meta name="twitter:description" content="Setup CTFd with CTFd-whale"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -129,15 +129,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol</h1>
+      <h1 class="post-title">Setup CTFd with CTFd-whale</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-01-16 </span>
+        <span class="post-time"> 2021-11-07 </span>
         <div class="post-category">
-            <a href="/categories/macos/"> macOS </a>
-            <a href="/categories/extension/"> Extension </a>
+            <a href="/categories/ctf/"> ctf </a>
             </div>
-          <span class="more-meta"> 1171 words </span>
+          <span class="more-meta"> 1490 words </span>
           <span class="more-meta"> 3 mins read </span>
         <span id="busuanzi_container_page_pv" class="more-meta"> <span id="busuanzi_value_page_pv"><img src="/img/spinner.svg" alt="spinner.svg"/></span> times read </span>
       </div>
@@ -150,10 +149,18 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#00-问题出现"><strong>00 问题出现</strong></a></li>
-        <li><a href="#01-尝试各种重启重装"><strong>01 尝试各种重启重装</strong></a></li>
-        <li><a href="#02-上网搜问客服啊"><strong>02 上网搜，问客服啊</strong></a></li>
-        <li><a href="#03-总结"><strong>03 总结</strong></a></li>
+        <li><a href="#00-调查">00 调查</a></li>
+        <li><a href="#01-曲折">01 曲折</a>
+          <ul>
+            <li><a href="#坑1">坑1：</a></li>
+            <li><a href="#坑2">坑2：</a></li>
+          </ul>
+        </li>
+        <li><a href="#02-搭建">02 搭建</a></li>
+        <li><a href="#03-出题pwn方向">03 出题（pwn方向）</a></li>
+        <li><a href="#04-主题">04 主题</a></li>
+        <li><a href="#05-注意点">05 注意点：</a></li>
+        <li><a href="#06-参考文章">06 参考文章：</a></li>
       </ul>
     </li>
   </ul>
@@ -161,50 +168,115 @@
   </div>
 </div>
     <div class="post-content">
-      <p>记一次解决macOS Catalina中Finder插件冲突的问题。</p>
-<h2 id="00-问题出现"><strong>00 问题出现</strong></h2>
-<p>之前在用Mojave的时候，给Finder装了几个插件：<code>iCloud Drive[系统自带]</code>, <code>OneDrive Finder Integration</code>, <code>Easy New File Extension</code>, <code>Dropbox Finder Extension</code>, <code>NutstoreFinderExtension</code>.</p>
-<p><img src="/images/SyncSoftwareFinder/FinderExtensions.png" alt="Local Picture" title="FinderExtensions"></p>
-<p>当时他们都还相安无事。</p>
-<p>之后系统升级到了Catalina，然后打开Finder之后，发现OneDrive、NutStore同步文件右下角的<code>绿色小勾</code>都不见了，我也不知道哪些文件是要永久留盘，哪些是被free up space的。。哎，这咋整呢。。</p>
-<h2 id="01-尝试各种重启重装"><strong>01 尝试各种重启重装</strong></h2>
-<p>虽然这bug很奇怪，但是毕竟是Catalina，bug多一点也没啥，那就先老规矩重启重装大法。</p>
+      <p>记一次搭建CTF pwn靶场的经过。</p>
+<h2 id="00-调查">00 调查</h2>
+<p>在常用搜索引擎中搜索一下，看到了<a href="https://github.com/CTFd/CTFd">CTFd</a>这个开源框架很受欢迎，支持自定义插件、主题，还有赵师傅的<a href="https://github.com/glzjin/CTFd-Whale">CTFd-Whale</a>这个支持动态靶机的插件。简直为懒人开箱即食打造，话不多说开搞。</p>
+<h2 id="01-曲折">01 曲折</h2>
+<p>网上一搜一大把关于搭建CTFd和CTFd-Whale的教程，但是这个插件是2年前开源的，文章也大多集中在2年前。不过也翻到了几篇去年和今年上半年的文章，CTFd的版本大多是3.3.0或3.3.1，而此时CTFd的最新版本是3.4.0（其实就隔了1-2个版本），但是强迫症想体验最新版，于是：</p>
+<h3 id="坑1">坑1：</h3>
+<p>docker-compose版本过新。</p>
+<p>因为基于Docker是最方便的，所以用了基于Docker的方案，Docker的安装采用了官网的方案：</p>
 <ul>
-<li>系统重启 =&gt; 无駄だ（mudada）</li>
-<li>Finder重启 =&gt; 无駄だ</li>
-<li>Onedrive重启 =&gt; 无駄だ</li>
-<li>Nutstore重启 =&gt; 无駄だ</li>
-<li>Onedrive重装（Appstore） =&gt; 无駄だ</li>
-<li>Onedrive花样重装（官网安装包） =&gt; 无駄だ</li>
-<li>Nutstore重装 =&gt; 无駄だ</li>
+<li><a href="https://docs.docker.com/engine/install/ubuntu/">Install Docker Engine on Ubuntu</a></li>
+<li><a href="https://docs.docker.com/compose/install/">Install Docker Compose</a></li>
 </ul>
-<h2 id="02-上网搜问客服啊"><strong>02 上网搜，问客服啊</strong></h2>
-<p>一筹莫展之际，无心再做别的事（其实是快过年心里有点躁动）</p>
-<p>劳资遇到这种问题，别人说不定也遇到过，上网搜，结果就只有 Microsoft 官方的形式回答</p>
-<p><a href="https://answers.microsoft.com/en-us/msoffice/forum/all/no-sync-icons-in-finder/d5177b10-4fb2-4ad1-a1d1-08729abd4042">Microsoft Community: No sync icons in Finder</a></p>
-<p>这回答跟废话没啥差别。。。</p>
-<p>那就去找客服吧。</p>
-<p>然而巨硬的是填表单发送一个question，还得构思一篇英文短文，这思绪万千错乱的神经容不得这般折腾了，先把巨硬搁置。</p>
-<p>再看坚果云的，在线客服直接聊问题。</p>
-<p><img src="/images/SyncSoftwareFinder/NutstoreChat1.png" alt="Local Picture" title="NutstoreChat1"></p>
-<p>图文交流，虽然一开始也让我重启之类的，但是一番沟通后</p>
-<p><img src="/images/SyncSoftwareFinder/NutstoreChat2.png" alt="Local Picture" title="NutstoreChat2"></p>
-<p>把问题锁定在了插件冲突上，此时我把 <code>Easy New File Extension</code> 关掉之后，坚果云文件夹下果然出现了熟悉的绿色小勾</p>
-<p><img src="/images/SyncSoftwareFinder/NutstoreFinder.png" alt="Local Picture" title="NutstoreFinder"></p>
-<p>但是我的 Onedrive 的文件还全部都坚持着原貌，然后我趁机问了一下客服有没有遇到过onedrive的问题</p>
-<p><img src="/images/SyncSoftwareFinder/NutstoreChat3.png" alt="Local Picture" title="NutstoreChat3"></p>
-<p>在她建议下我把插件们开开关关，把软件们开开关关，然后发现了<code>重大突破</code>：</p>
+<p>好家伙，我看到Docker Compose的<a href="https://github.com/docker/compose/releases">Github Release</a>上的最新版本是2.1.0，忍不住装了最新版。</p>
+<p>然后下载CTFd以及CTFd-Whale的repo，并开始docker-compose，结果遇到这个问题</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">Error response from daemon: Could not attach to network ctfd_with_ctfd-whale_frp-containers: rpc error: <span class="nv">code</span> <span class="o">=</span> PermissionDenied
+</code></pre></td></tr></table>
+</div>
+</div><p>用的root用户起的docker和network，能力有限，实在没搞懂rpc怎么就PermissionDenied。</p>
+<p>后来看到Err0rCM师傅的<a href="https://err0r.top/article/CTFD/">文章</a>中提到了一些坑点，其中的一句&quot;似乎docker和系统的版本会有影响&quot;让我恍然大悟，之后使用Vicosna师傅文章中安装Docker和Docker-compose的方法，就没有这个问题了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># Docker: 适用于Ubuntu，Debian,Centos等大部分Linux，会3小时同步一次Docker官方资源</span>
+curl -sSL https://get.daocloud.io/docker <span class="p">|</span> sh
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># Docker Compose</span>
+curl -L https://get.daocloud.io/docker/compose/releases/download/1.29.2/docker-compose-<span class="sb">`</span>uname -s<span class="sb">`</span>-<span class="sb">`</span>uname -m<span class="sb">`</span> &gt; /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+</code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>因为版本问题折腾了很久，还从头来了好多次。。。</p>
+</blockquote>
+<h3 id="坑2">坑2：</h3>
+<p>CTFd repo的选择。</p>
+<p>新版本强迫症已经治好了，不敢乱用新版本了，谁知道会出什么幺蛾子，毕竟能用是第一位。</p>
 <ul>
-<li>只打开 <code>OneDrive Finder Integration</code> 一个插件的时候，把onedrive重启可以看到onedrive文件夹下的绿色小勾。此时一定得把 <code>Easy New File Extension</code> 关掉。</li>
-<li>此时再打开 <code>NutstoreFinderExtension</code> 发现nutstore目录下的文件也都有了绿色小勾，而且onedrive目录下的小勾都还在。（窃喜</li>
-<li>之后把 <code>iCloud Drive</code> 和 <code>Dropbox Finder Extension</code> 都打开，也都没啥问题。</li>
-<li>最后打开了 <code>Easy New File Extension</code> 这个传说中引起冲突的开关，发现竟然也都没事，onedrive和nutstore的绿色小勾都还在。</li>
+<li>CTFd最新版本3.4.0：没有用这个，怕和CTFd-Whale插件出现什么兼容性问题，还是用各位师傅的版本最稳</li>
+<li>有些师傅的repo可能是有点旧，或者和我系统组件不兼容之类的，会在docker build阶段出现 <code>apk add python ERROR: unable to select package</code>看上去像是网络问题的错误，时间紧迫没有再有限时间搜到解决方法，放弃之</li>
+<li>最后用了Vicosna师傅的版本，挺稳的</li>
 </ul>
-<h2 id="03-总结"><strong>03 总结</strong></h2>
-<p>刚刚废话这么久其实可以总结成一点，就是 <code>Easy New File Extension</code> 就是冲突开关，这个插件不能早于其他插件打开，不然其他插件就会无法生效。</p>
-<p>正确的做法就是：先开启别的插件（onedrive、nutstore），等它们都生效后再打开 EasyNewFile插件。</p>
-<p>对了，还想说一下Nutstore的客服态度真的好好啊，聊天非常愉快，而且帮我解决了问题。</p>
-<p>绝对没有广告神马的，我这种博客都没人看的，一点流量都没有，而且onedrive、nutstore、dropbox、easynewfile、iCloud都是有名的软件，也用不着我做广告。。。。（废话一堆真是</p>
+<h2 id="02-搭建">02 搭建</h2>
+<p>参考<a href="https://www.vicosna.com/posts/ctfd/#%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F">Vicosna师傅的文章</a>就好，很详细了</p>
+<h2 id="03-出题pwn方向">03 出题（pwn方向）</h2>
+<p>使用TaQini师傅的<a href="https://github.com/TaQini/pwn_docker">pwn_docker</a>快速部署工具</p>
+<ul>
+<li>
+<p>首先生成docker镜像</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ ./deploy.py your_pwn_challenge docker_REPOSITORY_name
+</code></pre></td></tr></table>
+</div>
+</div><p>然后可以通过<code>docker images</code>看到刚刚生成的镜像</p>
+</li>
+<li>
+<p>然后新建题目，题目类型为dynamic_docker，并进行如下配置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">Docker Image: 刚刚生成的镜像名
+Frp Redirect Type: Direct
+Frp Redirect Port: <span class="m">9999</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>然后注意这种动态靶机的题目，静态flag空着就行，whale插件会通过环境变量下发随机flag到靶机，exp可以打通</p>
+</li>
+<li>
+<p>以上的方法适合flag和elf分离的题目，而且每个instance的flag都是不同的；如果flag在elf中，题目类型用默认，flag用静态flag就好</p>
+</li>
+</ul>
+<h2 id="04-主题">04 主题</h2>
+<p>使用了<a href="https://github.com/chainflag/ctfd-neon-theme">neon主题</a>，还挺好看的</p>
+<h2 id="05-注意点">05 注意点：</h2>
+<ol>
+<li>使用赵师傅的<a href="https://github.com/glzjin/CTFd">CTFd</a> pull docker images的时候，不知道是因为CTFd的版本较旧还是我没有开镜像加速，有几个下载条贼慢。Vicosna师傅的<a href="https://github.com/vicosna/CTFd">CTFd</a>和yichen师傅的<a href="https://gitee.com/yichen115/CTFd.git">CTFd</a> pull docker images的时候就挺快。</li>
+</ol>
+<h2 id="06-参考文章">06 参考文章：</h2>
+<ol>
+<li><a href="https://www.vicosna.com/posts/ctfd/#%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F">CTFd最新动态靶场环境部署笔记</a> - Vicosna师傅</li>
+<li><a href="https://www.yuque.com/hxfqg9/misc/ctfd">CTFd&amp;ctfd-whale动态靶机搭建与维护</a> - yichen师傅</li>
+<li><a href="https://www.zhaoj.in/read-6333.html">CTFd-Whale 推荐部署实践</a> - zhaoj师傅</li>
+<li><a href="https://err0r.top/article/CTFD/">CTFD支持动态靶机的搭建笔记</a> - Err0rCM师傅</li>
+</ol>
     </div>
 
     
@@ -224,17 +296,12 @@
   </div>
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/macos/">macOS</a>
-          <a href="/tags/extension/">Extension</a>
+          <a href="/tags/ctf/">ctf</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/flashlineageosonmi4/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Flash LineageOS on Mi4</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/installkali2019onparallel/">
-            <span class="next-text nav-default">Install Kali 2019 on Parallel</span>
+        
+        <a class="next" href="/post/setupseafileonserver/">
+            <span class="next-text nav-default">Setup seafile on server with docker</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -260,8 +327,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2020-01-16 09:45:32 \u002b0800 CST',
-        title: 'Solved Problem: Files in my Onedrive\/NutStore folder have no green tick check symbol',
+        id: '2021-11-07 13:37:37 \u002b0800 CST',
+        title: 'Setup CTFd with CTFd-whale',
         clientID: '6ec2d4e18a02ee89da4e',
         clientSecret: 'f2443f8af6b97e6700dd65a6605fbdc444903943',
         repo: 'BlogComments',
@@ -273,7 +340,7 @@
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
 
-  <span id="/post/syncsoftwarefinder/" class="leancloud_visitors" data-flag-title="Solved Problem: Files in my Onedrive/NutStore folder have no green tick check symbol">
+  <span id="/post/setupctfd/" class="leancloud_visitors" data-flag-title="Setup CTFd with CTFd-whale">
 		<span class="post-meta-item-text">文章阅读量 </span>
 		<span class="leancloud-visitors-count">0</span>
 		<p></p>
